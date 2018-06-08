@@ -1,0 +1,85 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="ZWMReplacement.controller.TimeSheetReview" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Time Sheet Review" showNavButton="true" navButtonPress="onPress">
+		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+			<l:content>
+				<Label text="Personal No." wrapping="true">
+					<layoutData>
+						<l:GridData span=" L1"/>
+					</layoutData>
+				</Label>
+				<Input id="name11" value="{}" editable="false">
+					<layoutData>
+						<l:GridData span=" L1"/>
+					</layoutData>
+				</Input>
+				<Label text="Employee Name">
+					<layoutData>
+						<l:GridData span="L2"/>
+					</layoutData>
+				</Label>
+				<Label text="Timesheet Period" wrapping="true">
+					<layoutData>
+						<l:GridData span="L1"/>
+					</layoutData>
+				</Label>
+				<Input id="name131" value="{}" editable="false">
+					<layoutData>
+						<l:GridData span=" L1"/>
+					</layoutData>
+				</Input>
+				<Input id="name161" value="{}" editable="false">
+					<layoutData>
+						<l:GridData span=" L1"/>
+					</layoutData>
+				</Input>
+				<Label text="">
+					<layoutData>
+						<l:GridData span="L1"/>
+					</layoutData>
+				</Label>
+				<Label text=" Week" wrapping="true">
+					<layoutData>
+						<l:GridData span="L1"/>
+					</layoutData>
+				</Label>
+				<Input id="name12" value="{}" editable="false">
+					<layoutData>
+						<l:GridData span="L1"/>
+					</layoutData>
+				</Input>
+			</l:content>
+		</l:Grid>
+		<Table id="exportTable" inset="false" items="{path:'/Users'}" growing="true" growingThreshold="50">
+			<columns>
+				<Column>
+					<Text text="Order No."/>
+				</Column>
+				<Column>
+					<Text text="Operation No."/>
+				</Column>
+				<Column>
+					<Text text="WBS Element "/>
+				</Column>
+					<Column >
+					<Text text=""/>
+				</Column>
+			
+				<Column >
+					<Text text="Timesheet"/>
+				</Column>
+			
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<ObjectIdentifier title="{UserID}"/>
+						<Text text="{Firstname}"/>
+						<Text text="{Lastname}"/>
+						<Text text="{path:'Birthdate', type: 'sap.ui.model.type.Date'}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

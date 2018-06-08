@@ -1,0 +1,401 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:table="sap.ui.table" controllerName="ZWMReplacement.controller.CompleteButtonClick" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Work Execution Fiori App- Completion " showNavButton="true" navButtonPress="onPress">
+		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="Oper.Conf.Details">
+					<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+						<l:content>
+							<Label text="Order type" width="100%" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1 M1 S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name13" value="{/?orderData/Auart}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="{/?orderData/AuartDesc}" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+							</Label>
+							<Label text="Confirmation" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name30" value="{/?orderData/Asttx}" editable="false">
+								<layoutData>
+									<l:GridData span=" L2"/>
+								</layoutData>
+							</Input>
+							<Label text="Work Center" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name21" value="{/?orderData/Arbpl}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name29" value="" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Posting date" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L2"/>
+								</layoutData>
+							</Input>
+							<Label text="Order number" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1 M1 S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name11" value="{/?orderData/Aufnr}" editable="false">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+							</Label>
+							<Label text="Work start " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name41" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name19" value="{/?orderData/Fsavz}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Remaining Work " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name62" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name64" value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Actual Work " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name63" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name65" value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Operation number" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1 M1 S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name17" value="{/?orderData/Vornr}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+							</Label>
+							<Label text="Work End " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name81" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name78" value="{/?orderData/Fsavz}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Actual Duration " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name71" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name72" value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Forecast End " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name73" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Observation / Comments" class="sapUiSmallMarginTop sapUiTinyMarginBottom">
+								<layoutData>
+									<l:GridData span="L2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input>
+								<layoutData>
+									<l:GridData span="XL12 L10" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Input>
+							<Label text="Reason">
+								<layoutData>
+									<l:GridData span="L1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name22" value="{/?orderData/Street}" editable="false">
+								<layoutData>
+									<l:GridData span="L3"/>
+								</layoutData>
+							</Input>
+							<Label text="Actual Start" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name83" value="{/?orderData/Fsavz}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Cum. Actual Work" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name84" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name85" value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Warranty" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name86" value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Planned Duration " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name87" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name88" value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1 M1 S1"/>
+								</layoutData>
+							</Input>
+							<Label text="Actual Duration " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name89" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input id="name90" value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Actual End " wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name91" value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Forecast Work" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input value="{/?orderData/Fsavd}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Input value="H" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+						</l:content>
+					</l:Grid>
+					<Button text="Create Notif." type="Emphasized"></Button>
+					<Button text="Next" type="Emphasized"></Button>
+				</IconTabFilter>
+				<IconTabFilter text="Goods Movement">
+					<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+						<l:content>
+							<Label text="Order number" wrapping="true">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Label>
+							<Input id="name113" value="{/?orderData/Aufnr}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+							<Label text="Operation No ">
+								<layoutData>
+									<l:GridData span="L1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+								</layoutData>
+							</Label>
+							<Input id="name12" value="{/?orderData/Vornr}" editable="false">
+								<layoutData>
+									<l:GridData span="L1"/>
+								</layoutData>
+							</Input>
+						</l:content>
+					</l:Grid>
+					<content>
+						<table:Table rows="{/?orderData/Vornr}">
+							<table:columns>
+								<table:Column width="6rem">
+									<Label text="Item no."/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="6rem">
+									<Label text="Component"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="7rem">
+									<Label text="Component Description"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="6rem">
+									<Label text="Req. Qty"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="4rem">
+									<Label text="units"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="3rem">
+									<Label text="IC"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="6rem">
+									<Label text="Storage Loc"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="6rem">
+									<Label text="Plant"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="6rem">
+									<Label text="Batch"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+								<table:Column width="6rem">
+									<Label text="Withd. Qty"/>
+									<table:template>
+										<Text text="{/?orderData/Vornr}"></Text>
+									</table:template>
+								</table:Column>
+							</table:columns>
+						</table:Table>
+					</content>
+				</IconTabFilter>
+				<IconTabFilter text="Measuring Doc."></IconTabFilter>
+				<IconTabFilter text="Personal Nos "></IconTabFilter>
+			</items>
+		</IconTabBar>
+	</Page>
+</mvc:View>
