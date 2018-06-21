@@ -62,8 +62,13 @@
 				"async": true
 			},
 			"routes": [{
-				"name": "master",
+				"name": "workOrderMainTab",
 				"pattern": "",
+				"target": "workOrderMainTab"
+
+			}, {
+				"name": "master",
+				"pattern": "dummy",
 				"target": [
 					"master",
 					"orderDetails"
@@ -88,6 +93,9 @@
 
 			}],
 			"targets": {
+				"workOrderMainTab": {
+					"viewName": "WorkOrderMainTab"
+				},
 				"splitviewTarget": {
 					"viewName": "SplitView"
 				},

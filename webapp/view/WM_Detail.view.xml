@@ -1,16 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	controllerName="ZWMReplacement.controller.WM_Detail" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Work Execution Fiori App" navButtonPress="onNavBack" showNavButton="{device>/system/phone}">
-		<customHeader>
-			<Bar>
-				<contentLeft>
-					<Text text="Work Execution Fiori App "/>
-				</contentLeft>
-				<contentRight>
-					<Button press="onTimeSheet" text="Timesheet Review" type="Emphasized"></Button>
-				</contentRight>
-			</Bar>
-		</customHeader>
+	<Page>
 		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
 			<items>
 				<IconTabFilter text="Oper. Details">
@@ -187,7 +177,6 @@
 									<l:GridData span="L1"/>
 								</layoutData>
 							</Label>
-								
 							<Input id="name21" value="{/?orderData/Arbpl}" editable="false">
 								<layoutData>
 									<l:GridData span="XL1 L2 M4 S4"/>
@@ -263,7 +252,7 @@
 				<Button id="enableHold" text="Hold" type="Emphasized" press="onClickHold" enabled="false"></Button>
 				<Button id="enableReturns" text="Return" type="Emphasized" press="onClickReturns" enabled="false"></Button>
 				<Button id="enableForms" text="Forms" type="Emphasized" press="onClickForms" enabled="false"></Button>
-				<Button id="enableComplete" text="Complete" type="Emphasized" press="onNavto" ></Button>
+				<Button id="enableComplete" text="Complete" type="Emphasized" press="onNavto"></Button>
 			</Toolbar>
 		</footer>
 	</Page>
