@@ -243,17 +243,6 @@
 				<IconTabFilter text="Personal Nos."></IconTabFilter>
 			</items>
 		</IconTabBar>
-		<footer>
-			<Toolbar id="otbFooter">
-				<ToolbarSpacer/>
-				<Button id="enableEnroute" text="Enroute" type="Emphasized" press="onClick" enabled="false"></Button>
-				<Button id="enableOnSite" text="Onsite" type="Emphasized" press="onClickOnSite" enabled="false"></Button>
-				<Button id="enableInProgress" text="In progress" type="Emphasized" press="onClickInProgress" enabled="false"></Button>
-				<Button id="enableHold" text="Hold" type="Emphasized" press="onClickHold" enabled="false"></Button>
-				<Button id="enableReturns" text="Return" type="Emphasized" press="onClickReturns" enabled="false"></Button>
-				<Button id="enableForms" text="Forms" type="Emphasized" press="onClickForms" enabled="false"></Button>
-				<Button id="enableComplete" text="Complete" type="Emphasized" press="onNavto"></Button>
-			</Toolbar>
-		</footer>
+	
 	</Page>
 </mvc:View>
