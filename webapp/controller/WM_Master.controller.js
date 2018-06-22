@@ -16,7 +16,7 @@ sap.ui.define([
 			var sOrderId = oEvent.getSource().getSelectedItem().getBindingContext().sPath;
 			sOrderId = sOrderId.substring(9);
 			var data = oEvent.getSource().getSelectedItem().getBindingContext().oModel.oData.results[sOrderId];
-			this.getOwnerComponent().getRouter().navTo("orderDetails", {
+			this.getOwnerComponent().getRouter().navTo("workOrderMainTab", {
 				order: sOrderId,
 				orderData: data
 			});
