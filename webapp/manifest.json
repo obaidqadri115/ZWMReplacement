@@ -56,9 +56,7 @@
 				"controlId": "app",
 				"viewType": "XML",
 				"controlAggregation": "pages",
-				"bypassed": {
-					"target": ["orderDetails", "master"]
-				},
+
 				"async": true
 			},
 			"routes": [{
@@ -96,9 +94,7 @@
 				"workOrderMainTab": {
 					"viewName": "WorkOrderMainTab"
 				},
-				"splitviewTarget": {
-					"viewName": "SplitView"
-				},
+			
 				"master": {
 					"viewName": "WM_Master",
 					"parent": "splitviewTarget",
