@@ -7,8 +7,13 @@ sap.ui.define([
 
 		onInit: function() {
 			this.getOwnerComponent().getRouter().getRoute("orderDetails").attachPatternMatched(this._onRouteMatched, this);
+		},
+
+		onListItemPress: function(oEvent) {
+
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("componentMasterDetail");
 		}
-	
 
 	});
 

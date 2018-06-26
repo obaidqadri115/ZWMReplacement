@@ -1,100 +1,98 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	controllerName="ZWMReplacement.controller.DetailTab" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page>
-		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
-			<l:content>
-				<Label text="Description"/>
-				<Input id="name11" value="Steel Pole Inspection" editable="false">
-					<layoutData>
-						<l:GridData span="XL1 L5 M4 S4"/>
-					</layoutData>
-				</Input>
-				<Label text="Planning Unit" wrapping="true">
-					<layoutData>
-						<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
-					<layoutData>
-						<l:GridData span="L5 M3 S3"/>
-					</layoutData>
-				</Input>
-				<Label text="Business Area" wrapping="true">
-					<layoutData>
-						<l:GridData span="L2"/>
-					</layoutData>
-				</Label>
-				<Input id="name007" value="{/?orderData/Axttx}" editable="false">
-					<layoutData>
-						<l:GridData span="L3 M1 S1"/>
-					</layoutData>
-				</Input>
-				<Label text="Work Center" wrapping="true">
-					<layoutData>
-						<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
-					<layoutData>
-						<l:GridData span="XL1 L5 M4 S4"/>
-					</layoutData>
-				</Input>
-				<Label text="Work Center Plant" wrapping="true">
-					<layoutData>
-						<l:GridData span="XL1 L2 M4 S4"/>
-					</layoutData>
-				</Label>
-				<TextArea id="name16" value="Steel Pole Inspection Steel Pole" editable="false">
-					<layoutData>
-						<l:GridData span="L3"/>
-					</layoutData>
-				</TextArea>
-				<Label text="Functional Location" wrapping="true">
-					<layoutData>
-						<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<TextArea id="name126" value="Steel Pole Inspection Steel Pole" editable="false">
-					<layoutData>
-						<l:GridData span="L5"/>
-					</layoutData>
-				</TextArea>
-				<Label text="Equipment" wrapping="true">
-					<layoutData>
-						<l:GridData span="XL1 L2 M4 S4"/>
-					</layoutData>
-				</Label>
-				<Input id="name165" value="{/?orderData/Axttx}" editable="false">
-					<layoutData>
-						<l:GridData span="L3 M1 S1"/>
-					</layoutData>
-				</Input>
-				<Label text="{/?orderData/Axttx}" wrapping="true">
-					<layoutData>
-						<l:GridData span="L1"/>
-					</layoutData>
-				</Label>
-				<Label text="History">
-					<layoutData>
-						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<Input id="name31" value="{/?orderData/Tplnr}" editable="false">
-					<layoutData>
-						<l:GridData span="XL1 L5 M4 S4"/>
-					</layoutData>
-				</Input>
-				<Label text="PRT">
-					<layoutData>
-						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<Input id="name32" value="{/?orderData/Tplnr}" editable="false">
-					<layoutData>
-						<l:GridData span="XL1 L5 M4 S4"/>
-					</layoutData>
-				</Input>
-			</l:content>
-		</l:Grid>
-	</Page>
+	<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+		<l:content>
+			<Label text="Description"/>
+			<Input id="name11" value="Steel Pole Inspection" editable="false">
+				<layoutData>
+					<l:GridData span="XL1 L5 M4 S4"/>
+				</layoutData>
+			</Input>
+			<Label text="Planning Unit" wrapping="true">
+				<layoutData>
+					<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
+				</layoutData>
+			</Label>
+			<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
+				<layoutData>
+					<l:GridData span="L5 M3 S3"/>
+				</layoutData>
+			</Input>
+			<Label text="Business Area" wrapping="true">
+				<layoutData>
+					<l:GridData span="L2"/>
+				</layoutData>
+			</Label>
+			<Input id="name007" value="{/?orderData/Axttx}" editable="false">
+				<layoutData>
+					<l:GridData span="L3 M1 S1"/>
+				</layoutData>
+			</Input>
+			<Label text="Work Center" wrapping="true">
+				<layoutData>
+					<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
+				</layoutData>
+			</Label>
+			<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+				<layoutData>
+					<l:GridData span="XL1 L5 M4 S4"/>
+				</layoutData>
+			</Input>
+			<Label text="Work Center Plant" wrapping="true">
+				<layoutData>
+					<l:GridData span="XL1 L2 M4 S4"/>
+				</layoutData>
+			</Label>
+			<TextArea id="name16" value="Steel Pole Inspection Steel Pole" editable="false">
+				<layoutData>
+					<l:GridData span="L3"/>
+				</layoutData>
+			</TextArea>
+			<Label text="Functional Location" wrapping="true">
+				<layoutData>
+					<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+				</layoutData>
+			</Label>
+			<TextArea id="name126" value="Steel Pole Inspection Steel Pole" editable="false">
+				<layoutData>
+					<l:GridData span="L5"/>
+				</layoutData>
+			</TextArea>
+			<Label text="Equipment" wrapping="true">
+				<layoutData>
+					<l:GridData span="XL1 L2 M4 S4"/>
+				</layoutData>
+			</Label>
+			<Input id="name165" value="{/?orderData/Axttx}" editable="false">
+				<layoutData>
+					<l:GridData span="L3 M1 S1"/>
+				</layoutData>
+			</Input>
+			<Label text="{/?orderData/Axttx}" wrapping="true">
+				<layoutData>
+					<l:GridData span="L1"/>
+				</layoutData>
+			</Label>
+			<Label text="History">
+				<layoutData>
+					<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+				</layoutData>
+			</Label>
+			<Input id="name31" value="{/?orderData/Tplnr}" editable="false">
+				<layoutData>
+					<l:GridData span="XL1 L5 M4 S4"/>
+				</layoutData>
+			</Input>
+			<Label text="PRT">
+				<layoutData>
+					<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+				</layoutData>
+			</Label>
+			<Input id="name32" value="{/?orderData/Tplnr}" editable="false">
+				<layoutData>
+					<l:GridData span="XL1 L5 M4 S4"/>
+				</layoutData>
+			</Input>
+		</l:content>
+	</l:Grid>
 </mvc:View>

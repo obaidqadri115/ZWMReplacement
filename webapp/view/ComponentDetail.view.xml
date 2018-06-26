@@ -1,0 +1,146 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="ZWMReplacement.controller.ComponentDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Text text="Component - {/?orderData/Aufnr}"/>
+				</contentLeft>
+				<contentRight>
+					<Button icon="sap-icon://edit" press="onPress" ariaLabelledBy="editButtonLabel"/>
+					<Button icon="sap-icon://action" press="onClick" ariaLabelledBy="actionButtonLabel"/>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+			<l:content>
+				<Label text="Description"/>
+				<Input id="name11" value="Steel Pole Inspection" editable="false">
+					<layoutData>
+						<l:GridData span="XL1 L4 M4 S4"/>
+					</layoutData>
+				</Input>
+				<Label text="Item" wrapping="true">
+					<layoutData>
+						<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
+					<layoutData>
+						<l:GridData span="L4 M3 S3"/>
+					</layoutData>
+				</Input>
+				<Label text="Operation" wrapping="true">
+					<layoutData>
+						<l:GridData span="L2"/>
+					</layoutData>
+				</Label>
+				<Input id="name007" value="{/?orderData/Axttx}" editable="false">
+					<layoutData>
+						<l:GridData span="L2 M1 S1"/>
+					</layoutData>
+				</Input>
+				<Label text="Stock Type" wrapping="true">
+					<layoutData>
+						<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+					<layoutData>
+						<l:GridData span="XL1 L4 M4 S4"/>
+					</layoutData>
+				</Input>
+				<Label text="Required Quantity" wrapping="true">
+					<layoutData>
+						<l:GridData span="XL1 L2 M4 S4"/>
+					</layoutData>
+				</Label>
+				<Input id="name16" value="Steel Pole Inspection" editable="false">
+					<layoutData>
+						<l:GridData span="L2"/>
+					</layoutData>
+				</Input>
+				<Label text="Plant" wrapping="true">
+					<layoutData>
+						<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name126" value="Steel Pole Inspection Steel Pole" editable="false">
+					<layoutData>
+						<l:GridData span="L4"/>
+					</layoutData>
+				</Input>
+				<Label text="Location" wrapping="true">
+					<layoutData>
+						<l:GridData span="XL1 L2 M4 S4"/>
+					</layoutData>
+				</Label>
+				<Input id="name165" value="{/?orderData/Axttx}" editable="false">
+					<layoutData>
+						<l:GridData span="L2 M1 S1"/>
+					</layoutData>
+				</Input>
+				<Label text="Batch">
+					<layoutData>
+						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name31" value="{/?orderData/Tplnr}" editable="false">
+					<layoutData>
+						<l:GridData span="XL1 L4 M4 S4"/>
+					</layoutData>
+				</Input>
+				<Label text="BinNum" wrapping="true">
+					<layoutData>
+						<l:GridData span="XL1 L2 M4 S4"/>
+					</layoutData>
+				</Label>
+				<Input id="name175" value="{/?orderData/Axttx}" editable="false">
+					<layoutData>
+						<l:GridData span="L2 M1 S1"/>
+					</layoutData>
+				</Input>
+				<Label text="Commited Quantity">
+					<layoutData>
+						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name32" value="{/?orderData/Tplnr}" editable="false">
+					<layoutData>
+						<l:GridData span="XL1 L4 M4 S4"/>
+					</layoutData>
+				</Input>
+				<Label text="Withdraw Quantity" wrapping="true">
+					<layoutData>
+						<l:GridData span="XL1 L2 M4 S4"/>
+					</layoutData>
+				</Label>
+				<Input id="name265" value="{/?orderData/Axttx}" editable="false">
+					<layoutData>
+						<l:GridData span="L2 M1 S1"/>
+					</layoutData>
+				</Input>
+				<Label text="Reservation">
+					<layoutData>
+						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name322" value="{/?orderData/Tplnr}" editable="false">
+					<layoutData>
+						<l:GridData span="XL1 L4 M4 S4"/>
+					</layoutData>
+				</Input>
+				<Label text="Reservationv Item" wrapping="true">
+					<layoutData>
+						<l:GridData span="XL1 L2 M4 S4"/>
+					</layoutData>
+				</Label>
+				<Input id="name665" value="{/?orderData/Axttx}" editable="false">
+					<layoutData>
+						<l:GridData span="L2 M1 S1"/>
+					</layoutData>
+				</Input>
+			</l:content>
+		</l:Grid>
+	</Page>
+</mvc:View>

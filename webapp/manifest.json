@@ -80,21 +80,16 @@
 				]
 
 			}, {
-				"name": "timeSheet",
-				"pattern": "timeSheet",
-				"target": "timeSheet"
-
-			}, {
-				"name": "completeButtonClick",
-				"pattern": "completeButtonClick",
-				"target": "completeButtonClick"
+				"name": "componentMasterDetail",
+				"pattern": "componentMasterDetail",
+				"target": "componentMasterDetail"
 
 			}],
 			"targets": {
 				"workOrderMainTab": {
 					"viewName": "WorkOrderMainTab"
 				},
-			
+
 				"master": {
 					"viewName": "WM_Master",
 					"parent": "splitviewTarget",
@@ -110,11 +105,8 @@
 					"viewLevel": 1
 				},
 
-				"timeSheet": {
-					"viewName": "TimeSheetReview"
-				},
-				"completeButtonClick": {
-					"viewName": "CompleteButtonClick"
+				"componentMasterDetail": {
+					"viewName": "ComponentMasterDetail"
 				}
 
 			}

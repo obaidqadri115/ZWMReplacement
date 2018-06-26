@@ -15,11 +15,22 @@
 		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
 			<items>
 				<IconTabFilter text="Detail">
-					<mvc:XMLView viewName="ZWMReplacement.view.DetailTab"/>
+					<content>
+						<mvc:XMLView viewName="ZWMReplacement.view.DetailTab"/>
+					</content>
 				</IconTabFilter>
 				<IconTabFilter text="Notification"></IconTabFilter>
 				<IconTabFilter text="Operations"></IconTabFilter>
-				<IconTabFilter text="Components"></IconTabFilter>
+				<IconTabFilter text="Components">
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<l:content>
+							<List id="notificationList">
+								<NotificationListItem title="1000000032: Breather-NA " description="20" showCloseButton="false" authorName="Required 1 EA "
+									datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPress"/>
+							</List>
+						</l:content>
+					</l:VerticalLayout>
+				</IconTabFilter>
 				<IconTabFilter text="Objects"></IconTabFilter>
 				<IconTabFilter text="Attachments"></IconTabFilter>
 				<IconTabFilter text="Maps"></IconTabFilter>
