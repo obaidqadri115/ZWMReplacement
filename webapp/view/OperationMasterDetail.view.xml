@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="ZWMReplacement.controller.OperationMasterDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Operation" showNavButton="true" navButtonPress="onPress">
+		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+			<detailPages>
+				<mvc:XMLView viewName="ZWMReplacement.view.OperationDetail"/>
+			</detailPages>
+			<masterPages>
+				<mvc:XMLView viewName="ZWMReplacement.view.OperationMaster"/>
+			</masterPages>
+		</SplitApp>
+	</Page>
+</mvc:View>

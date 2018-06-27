@@ -20,7 +20,16 @@
 					</content>
 				</IconTabFilter>
 				<IconTabFilter text="Notification"></IconTabFilter>
-				<IconTabFilter text="Operations"></IconTabFilter>
+				<IconTabFilter text="Operations">
+						<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<l:content>
+							<List id="notificationList1">
+								<NotificationListItem title="1000000033: Breather-NA " description="20" showCloseButton="false" authorName="Required 1 EA "
+									datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
+							</List>
+						</l:content>
+					</l:VerticalLayout>
+				</IconTabFilter>
 				<IconTabFilter text="Components">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>

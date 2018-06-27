@@ -84,6 +84,12 @@
 				"pattern": "componentMasterDetail",
 				"target": "componentMasterDetail"
 
+			},
+			{
+				"name": "operationMasterDetail",
+				"pattern": "operationMasterDetail",
+				"target": "operationMasterDetail"
+
 			}],
 			"targets": {
 				"workOrderMainTab": {
@@ -107,6 +113,9 @@
 
 				"componentMasterDetail": {
 					"viewName": "ComponentMasterDetail"
+				},
+				"operationMasterDetail": {
+					"viewName": "OperationMasterDetail"
 				}
 
 			}
