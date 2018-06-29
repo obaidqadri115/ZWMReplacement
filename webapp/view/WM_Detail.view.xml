@@ -19,7 +19,11 @@
 						<mvc:XMLView viewName="ZWMReplacement.view.DetailTab"/>
 					</content>
 				</IconTabFilter>
-				<IconTabFilter text="Notification"></IconTabFilter>
+				<IconTabFilter text="Notification">
+					<content>
+						<mvc:XMLView viewName="ZWMReplacement.view.Notification_Tab"/>
+					</content>
+				</IconTabFilter>
 				<IconTabFilter text="Operations">
 						<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
