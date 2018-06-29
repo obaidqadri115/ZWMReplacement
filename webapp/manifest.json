@@ -60,37 +60,44 @@
 				"async": true
 			},
 			"routes": [{
-				"name": "workOrderMainTab",
-				"pattern": "",
-				"target": "workOrderMainTab"
+					"name": "workOrderMainTab",
+					"pattern": "",
+					"target": "workOrderMainTab"
 
-			}, {
-				"name": "master",
-				"pattern": "dummy",
-				"target": [
-					"master",
-					"orderDetails"
-				]
-			}, {
-				"name": "orderDetails",
-				"pattern": "orders/:?orderData:",
-				"target": [
-					"master",
-					"orderDetails"
-				]
+				}, {
+					"name": "master",
+					"pattern": "dummy",
+					"target": [
+						"master",
+						"orderDetails"
+					]
+				}, {
+					"name": "orderDetails",
+					"pattern": "orders/:?orderData:",
+					"target": [
+						"master",
+						"orderDetails"
+					]
 
-			}, {
-				"name": "componentMasterDetail",
-				"pattern": "componentMasterDetail",
-				"target": "componentMasterDetail"
+				}, {
+					"name": "componentMasterDetail",
+					"pattern": "componentMasterDetail",
+					"target": "componentMasterDetail"
 
-			},
-			{
-				"name": "operationMasterDetail",
-				"pattern": "operationMasterDetail",
-				"target": "operationMasterDetail"
+				},
 
-			}],
+				{
+					"name": "operationMasterDetail",
+					"pattern": "operationMasterDetail",
+					"target": "operationMasterDetail"
+
+				}, {
+					"name": "editWO",
+					"pattern": "editWO",
+					"target": "editWO"
+
+				}
+			],
 			"targets": {
 				"workOrderMainTab": {
 					"viewName": "WorkOrderMainTab"
@@ -116,6 +123,9 @@
 				},
 				"operationMasterDetail": {
 					"viewName": "OperationMasterDetail"
+				},
+				"editWO": {
+					"viewName": "EditWorkOrder"
 				}
 
 			}

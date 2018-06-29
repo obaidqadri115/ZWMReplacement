@@ -1,0 +1,120 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZWMReplacement.controller.EditWorkOrder"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Page title="Add/Edit Work Order" showNavButton="true" navButtonPress="onPressEditBack">
+		
+		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+			<l:content>
+				<Label text="Planning Plant ">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Label text="Priority ">
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</Label>
+				<Input id="name11" value="{/?orderData/Aufnr}" editable="false">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Input>
+				<ComboBox items="" width="900px">
+					<core:Item key="{key}" text="{text}"/>
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</ComboBox>
+				<Label text="Description" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Label text="Functional Location" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</Label>
+				<Input id="name18" value="{/?orderData/Vornr}" editable="false">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Input>
+				<Input id="name17" value="{/?orderData/Vornr}" editable="false">
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</Input>
+				<Label text="Type" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Label text="Equipment" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</Label>
+				<ComboBox items="" width="900px">
+					<core:Item key="{key}" text="{text}"/>
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</ComboBox>
+				<Input id="name19" value="{/?orderData/Vornr}" editable="false">
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</Input>
+				<Label text="Business Area" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Label text="Notes" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</Label>
+				<ComboBox items="" width="900px">
+					<core:Item key="{key}" text="{text}"/>
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</ComboBox>
+				<Input id="name20" value="{/?orderData/Vornr}" editable="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6"/>
+					</layoutData>
+				</Input>
+				<Label text="Work Center Plant" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name13" value="{/?orderData/Vornr}" editable="false">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Input>
+				<Label text="Main Work Center" wrapping="true">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Label>
+				<Input id="name14" value="{/?orderData/Vornr}" editable="false">
+					<layoutData>
+						<l:GridData span="L6 M6 S6" linebreakL="true" linebreakM="true" linebreakS="true"/>
+					</layoutData>
+				</Input>
+			</l:content>
+		</l:Grid>
+		<footer>
+			<OverflowToolbar id="otbFooter">
+				<ToolbarSpacer/>
+				<Button text="Save" type="Emphasized"/>
+				<Button text="Cancel" type="Emphasized"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
