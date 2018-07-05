@@ -5,5 +5,10 @@
       "templateVersion": "1.4.0",
       "dateTimeStamp": "Wed, 27 Jun 2018 11:26:35 GMT"
     }
-  ]
+  ],
+  "hcpdeploy": {
+    "account": "p2000349780trial",
+    "name": "zwmreplacement",
+    "lastVersionWeTriedToDeploy": "1.0.1"
+  }
 }

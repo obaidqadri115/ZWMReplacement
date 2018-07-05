@@ -20,29 +20,28 @@ sap.ui.define([
 			this.setModel(models.createDeviceModel(), "device");
 			this.getRouter().initialize();
 			
-		var data;
-			var odatamodel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/SAP/ZEAM_WM_FIORI_APP_SRV");
+			var data;
+			var jModel;
+			var that = this;
+			var odatamodel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV");
 			odatamodel.read(
-				"/UserSet?$filter=Userid eq '11133536'&$expand=OPERATIONSSET,RETURNSET",
+				"/HeaderSet?$filter=Userid eq '11153519'&$expand=NVHEADERTOOPERATIONS,NVHEADERTOCOMPONENTS",
 				null, null, false,
 				function(responce) {
-					console.log(responce.results[0]);
-					data = responce.results[0];
+					console.log(responce.results);
+					data = responce.results;
+					//JSON.Parse(JSON.stringify(data));
+					jModel = new JSONModel(data);
+					that.setModel(jModel,"WOModel");
 				},
 				function(error) {
 					console.log(error);
-				});
-			var oprset;
-			var rlength = data.RETURNSET.results.length;
-			if ((rlength === null) || (rlength === "") || (rlength === 0)) {
-				oprset = data.OPERATIONSSET;
-			} else {
-				oprset = data.RETURNSET.results;
-
+				});	
 			}
-			var jModel = new JSONModel(oprset); 
-			this.setModel(jModel); 
-
-		}
+			//this.setModel(jModel); 
+			
+			//var jModel1 = new JSONModel(data1); 
+			//this.setModel(jModel1);
+		//}
 	});
 });

@@ -1,17 +1,19 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZWMReplacement.controller.WM_Master"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page >
-			<customHeader>
+		<customHeader>
 			<Bar>
 				<contentLeft>
 					<Text text="Work Orders"/>
 				</contentLeft>
 			</Bar>
 		</customHeader>
-		<List id="orders" items="{/results}" mode="SingleSelectMaster" selectionChange="onSelectionChange">
-			<items>
-				<StandardListItem title="{Aufnr}" info="Operation No-{Vornr}" type="Active" press="onSelectionChange"/>
-			</items>
-		</List>
+		<content>
+			<List id="orders" items="{WOModel>/}" mode="SingleSelectMaster" selectionChange="onSelectionChange">
+				<items>
+					<StandardListItem title="{WOModel>Aufnr}" type="Active" press="onSelectionChange"/>
+				</items>
+			</List>
+		</content>
 	</Page>
 </mvc:View>

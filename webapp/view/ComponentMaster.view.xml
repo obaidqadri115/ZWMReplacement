@@ -8,10 +8,13 @@
 				</contentLeft>
 			</Bar>
 		</customHeader>
-		<List id="orders" items="{/results}" mode="SingleSelectMaster" selectionChange="onSelectionChange">
-			<items>
-				<StandardListItem title="{Aufnr}" info="Operation No-{Vornr}" type="Active" press="onSelectionChange"/>
-			</items>
-		</List>
+		<content>
+			<List id="orders" items="{ComponentModel>/}" mode="SingleSelectMaster" updateFinished="onComponentUpdateFinesh"
+				itemPress="onSelectionChange">
+				<items>
+					<StandardListItem title="{ComponentModel>Matnr}" description="{ComponentModel>Maktx}" type="Active"/>
+				</items>
+			</List>
+		</content>
 	</Page>
 </mvc:View>

@@ -8,20 +8,26 @@ sap.ui.define([
 		onInit: function() {
 
 			this.getOwnerComponent().getRouter().getRoute("master").attachPatternMatched(this._onRouteMatched, this);
-
+		/*	var oWMModel = sap.ui.getCore().getModel("WOModel");	
+			this.getView().setModel(oWMModel);*/
+		},
+		
+		onAfterRendering : function(){
+			//var oWMModel = this .getView().getModel("WOModel");
+			//var data = oWMModel.getData()[0];
+			this.getOwnerComponent().getRouter().navTo("workOrderDetail", {
+				WONum: "0"
+			});
 		},
 
 		onSelectionChange: function(oEvent) {
-
-			var sOrderId = oEvent.getSource().getSelectedItem().getBindingContext().sPath;
-			sOrderId = sOrderId.substring(9);
-			var data = oEvent.getSource().getSelectedItem().getBindingContext().oModel.oData.results[sOrderId];
-			this.getOwnerComponent().getRouter().navTo("workOrderMainTab", {
-				order: sOrderId,
-				orderData: data
+			//var oWMModel = this .getView().getModel("WOModel");
+			var sOrderPath = oEvent.getSource()._aSelectedPaths[0];
+			
+			//var data = oWMModel.getProperty(sOrderPath);
+			this.getOwnerComponent().getRouter().navTo("workOrderDetail", {
+				WONum: sOrderPath.split("/")[1]
 			});
-		
-
 		}
 	});
 

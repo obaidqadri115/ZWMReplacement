@@ -4,8 +4,11 @@
 		<customHeader>
 			<Bar>
 				<contentLeft>
-					<Text text="Work Order : {/?orderData/Aufnr} - Received "/>
+					<Text text="Work Order : {WODetModel>/Aufnr} - Received "/>
 				</contentLeft>
+				<!--<contentMiddle>
+					<Text text="Work Order : {WODetModel>/Aufnr} - Received "/>
+				</contentMiddle>-->
 				<contentRight>
 					<Button icon="sap-icon://edit" press="onPressEdit" ariaLabelledBy="editButtonLabel"/>
 					<Button icon="sap-icon://action" press="onClick" ariaLabelledBy="actionButtonLabel"/>
@@ -25,11 +28,26 @@
 					</content>
 				</IconTabFilter>
 				<IconTabFilter text="Operations">
-						<l:VerticalLayout class="sapUiContentPadding" width="100%">
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="notificationList1">
-								<NotificationListItem title="1000000033: Breather-NA " description="20" showCloseButton="false" authorName="Required 1 EA "
-									datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
+							<List id="notificationList1" items="{WODetModel>/NVHEADERTOOPERATIONS/results}" itemPress="onListItemPressOperations">
+								<items>
+									<!--	<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>VWerksDesc}"
+										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
+										-->
+									<ObjectListItem title="{WODetModel>Ltxa1}" type="Active" number="{WODetModel>Vornr}" numberUnit="">
+										<firstStatus>
+											<ObjectStatus text="{WODetModel>Arbpl}" state="None"/>
+										</firstStatus>
+										<!--<ObjectStatus text="{path: 'RequestStatus',formatter: '.claimStatusText'}" state="{ path: 'RequestStatus',formatter: '.claimStatus'}"/>-->
+										<attributes>
+											<!--{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}-->
+											<!--class="fontForApprovedAmt" {=${RequestStatus} === 'A' ? true:false}  "{WODetModel>Fsavd} - {WODetModel>Fsavz}" -->
+											<ObjectAttribute title="Start" text="{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'} {WODetModel>Fsavz}"/>
+											<ObjectAttribute title="Finish" text="{parts:[{path:'WODetModel>Fsedd'},{path:'WODetModel>Fsedz'}],formatter : '.dateFormatter'} {WODetModel>Fsedz}"/> 
+										</attributes> 
+									</ObjectListItem>
+								</items>
 							</List>
 						</l:content>
 					</l:VerticalLayout>
@@ -37,9 +55,11 @@
 				<IconTabFilter text="Components">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="notificationList">
-								<NotificationListItem title="1000000032: Breather-NA " description="20" showCloseButton="false" authorName="Required 1 EA "
-									datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPress"/>
+							<List id="notificationList" items="{WODetModel>/NVHEADERTOCOMPONENTS/results}">
+								<items>
+									<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>Maktx}"
+										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPress"/>
+								</items>
 							</List>
 						</l:content>
 					</l:VerticalLayout>

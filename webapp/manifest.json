@@ -56,53 +56,75 @@
 				"controlId": "app",
 				"viewType": "XML",
 				"controlAggregation": "pages",
-
 				"async": true
 			},
-			"routes": [{
-					"name": "workOrderMainTab",
+			"routes": [
+				{
+					"name": "WMInit",
 					"pattern": "",
-					"target": "workOrderMainTab"
-
-				}, {
+					"target": [
+						"WMMaster",
+						"WMDetail"
+					]
+				},
+				{
+					"name": "workOrderDetail",
+					"pattern": "/WMDetail/{WONum}",
+					"target": [
+						"WMMaster",
+						"WMDetail"
+					]
+				},
+				{
+					"name": "componentMasterDetail",
+					"pattern": "componentMasterDetail",
+					"target": [
+						"compMaster",
+						"compDetail"
+					]
+				},
+				{
+					"name": "componentDetail",
+					"pattern": "/componentDetail/{WONum}",
+					"target": [
+						"compMaster",
+						"compDetail"
+					]
+				},
+				{
+					"name": "operationMasterDetail",
+					"pattern": "operationMasterDetail",
+					"target": [
+						"opeMaster",
+						"opeDetail"
+					]
+				},
+				{
+					"name": "operationDetail",
+					"pattern": "operationDetail/{operationNum}",
+					"target": [
+						"opeMaster",
+						"opeDetail"
+					]
+				},
+				{
+					"name": "editWO",
+					"pattern": "editWO",
+					"target": "editWO"
+				},
+				{
 					"name": "master",
 					"pattern": "dummy",
 					"target": [
 						"master",
 						"orderDetails"
 					]
-				}, {
-					"name": "orderDetails",
-					"pattern": "orders/:?orderData:",
-					"target": [
-						"master",
-						"orderDetails"
-					]
-
-				}, {
-					"name": "componentMasterDetail",
-					"pattern": "componentMasterDetail",
-					"target": "componentMasterDetail"
-
-				},
-
-				{
-					"name": "operationMasterDetail",
-					"pattern": "operationMasterDetail",
-					"target": "operationMasterDetail"
-
-				}, {
-					"name": "editWO",
-					"pattern": "editWO",
-					"target": "editWO"
-
 				}
 			],
 			"targets": {
 				"workOrderMainTab": {
 					"viewName": "WorkOrderMainTab"
 				},
-
 				"master": {
 					"viewName": "WM_Master",
 					"parent": "splitviewTarget",
@@ -110,24 +132,60 @@
 					"controlAggregation": "masterPages",
 					"viewLevel": 0
 				},
-				"orderDetails": {
+				"WMDetail": {
 					"viewName": "WM_Detail",
-					"parent": "splitviewTarget",
-					"controlId": "splitContainerControl",
+					"parent": "workOrderMainTab",
+					"controlId": "idWOMainSplit",
 					"controlAggregation": "detailPages",
 					"viewLevel": 1
 				},
-
+				"WMMaster": {
+					"viewName": "WM_Master",
+					"parent": "workOrderMainTab",
+					"controlId": "idWOMainSplit",
+					"controlAggregation": "masterPages",
+					"viewLevel": 1
+				},
 				"componentMasterDetail": {
 					"viewName": "ComponentMasterDetail"
+				},
+				"compDetail": {
+					"viewName": "ComponentDetail",
+					"parent": "componentMasterDetail",
+					"controlId": "idSplitComponent",
+					"controlAggregation": "detailPages",
+					"viewLevel": 1
+				},
+				"compMaster": {
+					"viewName": "ComponentMaster",
+					"parent": "componentMasterDetail",
+					"controlId": "idSplitComponent",
+					"controlAggregation": "masterPages",
+					"viewLevel": 1
 				},
 				"operationMasterDetail": {
 					"viewName": "OperationMasterDetail"
 				},
+				"opeDetail": {
+					"viewName": "OperationDetail",
+					"parent": "operationMasterDetail",
+					"controlId": "idSplitOperation",
+					"controlAggregation": "detailPages",
+					"viewLevel": 1
+				},
+				"opeMaster": {
+					"viewName": "OperationMaster",
+					"parent": "operationMasterDetail",
+					"controlId": "idSplitOperation",
+					"controlAggregation": "masterPages",
+					"viewLevel": 1
+				},
+				"operationDetail": {
+					"viewName": "OperationDetail"
+				},
 				"editWO": {
 					"viewName": "EditWorkOrder"
 				}
-
 			}
 		},
 		"dependencies": {
@@ -155,9 +213,15 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

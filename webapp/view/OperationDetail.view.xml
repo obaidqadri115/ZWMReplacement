@@ -4,7 +4,7 @@
 		<customHeader>
 			<Bar>
 				<contentLeft>
-					<Text text="Operation - {/?orderData/Aufnr}"/>
+					<Text text="Operation - {operationDetailModel>/Vornr}"/>
 				</contentLeft>
 				<contentRight>
 					<Button icon="sap-icon://edit" press="onPress" ariaLabelledBy="editButtonLabel"/>
@@ -12,66 +12,67 @@
 				</contentRight>
 			</Bar>
 		</customHeader>
-		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
-			<l:content>
-				<Label text="Description"/>
-				<Input id="name11" value="Steel Pole Inspection" editable="false">
-					<layoutData>
-						<l:GridData span="XL1 L4 M4 S4"/>
-					</layoutData>
-				</Input>
-				<Label text="Work Center" wrapping="true">
-					<layoutData>
-						<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
-					<layoutData>
-						<l:GridData span="L4 M3 S3"/>
-					</layoutData>
-				</Input>
-				<Label text="Wrk Ctr Plant" wrapping="true">
-					<layoutData>
-						<l:GridData span="L2"/>
-					</layoutData>
-				</Label>
-				<Input id="name007" value="{/?orderData/Axttx}" editable="false">
-					<layoutData>
-						<l:GridData span="L2 M1 S1"/>
-					</layoutData>
-				</Input>
-				<Label text="Control Key" wrapping="true">
-					<layoutData>
-						<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
-					<layoutData>
-						<l:GridData span="XL1 L4 M4 S4"/>
-					</layoutData>
-				</Input>
-				<Label text="Sort Key" wrapping="true">
-					<layoutData>
-						<l:GridData span="XL1 L2 M4 S4"/>
-					</layoutData>
-				</Label>
-				<Input id="name16" value="Steel Pole Inspection" editable="false">
-					<layoutData>
-						<l:GridData span="L2"/>
-					</layoutData>
-				</Input>
-				<Label text="Status" wrapping="true">
-					<layoutData>
-						<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
-					</layoutData>
-				</Label>
-				<Input id="name126" value="Steel Pole Inspection Steel Pole" editable="false">
-					<layoutData>
-						<l:GridData span="L4"/>
-					</layoutData>
-				</Input>
-			</l:content>
-		</l:Grid>
+		<content>
+			<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+				<l:content>
+					<Label text="Description"/>
+					<Input id="name11" value="Steel Pole Inspection" editable="false">
+						<layoutData>
+							<l:GridData span="XL1 L4 M4 S4"/>
+						</layoutData>
+					</Input>
+					<Label text="Work Center" wrapping="true">
+						<layoutData>
+							<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
+						</layoutData>
+					</Label>
+					<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
+						<layoutData>
+							<l:GridData span="L4 M3 S3"/>
+						</layoutData>
+					</Input>
+					<Label text="Wrk Ctr Plant" wrapping="true">
+						<layoutData>
+							<l:GridData span="L2"/>
+						</layoutData>
+					</Label>
+					<Input id="name007" value="{operationDetailModel>/ArbplDesc}" editable="false">
+						<layoutData>
+							<l:GridData span="L2 M1 S1"/>
+						</layoutData>
+					</Input>
+					<Label text="Control Key" wrapping="true">
+						<layoutData>
+							<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
+						</layoutData>
+					</Label>
+					<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+						<layoutData>
+							<l:GridData span="XL1 L4 M4 S4"/>
+						</layoutData>
+					</Input>
+					<Label text="Sort Key" wrapping="true">
+						<layoutData>
+							<l:GridData span="XL1 L2 M4 S4"/>
+						</layoutData>
+					</Label>
+					<Input id="name16" value="{operationDetailModel>/SortKey}" editable="false">
+						<layoutData>
+							<l:GridData span="L2"/>
+						</layoutData>
+					</Input>
+					<Label text="Status" wrapping="true">
+						<layoutData>
+							<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
+						</layoutData>
+					</Label>
+					<Input id="name126" value="{operationDetailModel>/SteusDesc}" editable="false">
+						<layoutData>
+							<l:GridData span="L4"/>
+						</layoutData>
+					</Input>
+				</l:content>
+			</l:Grid>
 			<Bar>
 				<contentLeft>
 					<Text text="Operation Notes"/>
@@ -81,9 +82,9 @@
 				</contentRight>
 			</Bar>
 			<Input id="txtoperationnotes" value="Steel Pole Inspection Steel Pole" editable="true">
-					<layoutData>
-						<l:GridData span="L4"/>
-					</layoutData>
+				<layoutData>
+					<l:GridData span="L4"/>
+				</layoutData>
 			</Input>
 			<Bar>
 				<contentLeft>
@@ -96,6 +97,11 @@
 					<Button icon="sap-icon://accept" press="onPress" ariaLabelledBy="acceptButtonLabel"/>
 				</contentRight>
 			</Bar>
-		
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
 	</Page>
 </mvc:View>

@@ -3,7 +3,7 @@
 	<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
 		<l:content>
 			<Label text="Description"/>
-			<Input id="name11" value="Steel Pole Inspection" editable="false">
+			<Input id="name11" value="{WODetModel>/Ktext}" editable="false">
 				<layoutData>
 					<l:GridData span="XL1 L5 M4 S4"/>
 				</layoutData>
@@ -13,7 +13,7 @@
 					<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
 				</layoutData>
 			</Label>
-			<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
+			<Input id="name14" value="{WODetModel>/IwerkDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="L5 M3 S3"/>
 				</layoutData>
@@ -23,7 +23,7 @@
 					<l:GridData span="L2"/>
 				</layoutData>
 			</Label>
-			<Input id="name007" value="{/?orderData/Axttx}" editable="false">
+			<Input id="name007" value="{WODetModel>/GsberDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="L3 M1 S1"/>
 				</layoutData>
@@ -33,7 +33,7 @@
 					<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
 				</layoutData>
 			</Label>
-			<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+			<Input id="name10" value="{WODetModel>/ArbplDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="XL1 L5 M4 S4"/>
 				</layoutData>
@@ -43,7 +43,7 @@
 					<l:GridData span="XL1 L2 M4 S4"/>
 				</layoutData>
 			</Label>
-			<TextArea id="name16" value="Steel Pole Inspection Steel Pole" editable="false">
+			<TextArea id="name16" value="{WODetModel>/WawrkDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="L3"/>
 				</layoutData>
@@ -53,7 +53,7 @@
 					<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
 				</layoutData>
 			</Label>
-			<TextArea id="name126" value="Steel Pole Inspection Steel Pole" editable="false">
+			<TextArea id="name126" value="{WODetModel>/TplnrDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="L5"/>
 				</layoutData>
@@ -63,7 +63,7 @@
 					<l:GridData span="XL1 L2 M4 S4"/>
 				</layoutData>
 			</Label>
-			<Input id="name165" value="{/?orderData/Axttx}" editable="false">
+			<Input id="name165" value="{WODetModel>/EqunrQmDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="L3 M1 S1"/>
 				</layoutData>
@@ -78,7 +78,7 @@
 					<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
 				</layoutData>
 			</Label>
-			<Input id="name31" value="{/?orderData/Tplnr}" editable="false">
+			<Input id="name31" value="{WODetModel>/WawrkDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="XL1 L5 M4 S4"/>
 				</layoutData>
@@ -88,7 +88,7 @@
 					<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
 				</layoutData>
 			</Label>
-			<Input id="name32" value="{/?orderData/Tplnr}" editable="false">
+			<Input id="name32" value="{WODetModel>/PriokDesc}" editable="false">
 				<layoutData>
 					<l:GridData span="XL1 L5 M4 S4"/>
 				</layoutData>

@@ -3,8 +3,8 @@
 	<Page title="Notification Details"/>
 		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
 			<l:content>
-				<Label text="Notification Tab"/>
-				<Input id="name11" value="Steel Pole Inspection" editable="false">
+				<Label text="Notification Type"/>
+				<Input id="name11" value="{WODetModel>/Qmnum}" editable="false">
 					<layoutData>
 						<l:GridData span="XL1 L5 M4 S4"/>
 					</layoutData>
@@ -14,7 +14,7 @@
 						<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
+				<Input id="name14" value="{WODetModel>/Qmtxt}" editable="false">
 					<layoutData> 
 						<l:GridData span="L5 M3 S3"/>
 					</layoutData>
@@ -24,7 +24,7 @@
 						<l:GridData span="L2" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name007" value="{/?orderData/Axttx}" editable="false">
+				<Input id="name007" value="{WODetModel>/TplnrQmDesc}" editable="false">
 					<layoutData>
 						<l:GridData span="L3 M1 S1"/>
 					</layoutData>
@@ -34,7 +34,7 @@
 						<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+				<Input id="name10" value="{WODetModel>/EqunrQmDesc}" editable="false">
 					<layoutData>
 						<l:GridData span="XL1 L5 M4 S4"/>
 					</layoutData>

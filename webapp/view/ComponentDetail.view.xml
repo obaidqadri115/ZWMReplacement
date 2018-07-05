@@ -4,7 +4,7 @@
 		<customHeader>
 			<Bar>
 				<contentLeft>
-					<Text text="Component - {/?orderData/Aufnr}"/>
+					<Text text="Component - {ComponentDetailModel>/Matnr}"/>
 				</contentLeft>
 				<contentRight>
 					<Button icon="sap-icon://edit" press="onPress" ariaLabelledBy="editButtonLabel"/>
