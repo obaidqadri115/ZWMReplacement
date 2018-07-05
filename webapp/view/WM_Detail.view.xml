@@ -64,7 +64,27 @@
 						</l:content>
 					</l:VerticalLayout>
 				</IconTabFilter>
-				<IconTabFilter text="Objects"></IconTabFilter>
+				
+				<IconTabFilter text="Objects">
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<l:content>
+							<List id="notificationList2" items="{WODetModel>/NVHEADERTOOBJECTS/results}">
+								<items>
+									<ObjectListItem title="Object {WODetModel>SermatGuid}" type="Active" number="" numberUnit="">
+										<firstStatus>
+											<ObjectStatus text="Desc {WODetModel>Equidescr}" state="None"/>
+											<ObjectStatus text="FLOC      {WODetModel>FunctLoc}" state="None"/>
+										</firstStatus>
+										<attributes>
+											<ObjectAttribute title="Equipment" text="{WODetModel>Equipment}"/>
+										</attributes> 
+									</ObjectListItem>
+								</items>
+							</List>
+						</l:content>
+					</l:VerticalLayout>
+				</IconTabFilter>
+				
 				<IconTabFilter text="Attachments"></IconTabFilter>
 				<IconTabFilter text="Maps"></IconTabFilter>
 			</items>

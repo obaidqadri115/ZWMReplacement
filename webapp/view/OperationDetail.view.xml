@@ -16,7 +16,7 @@
 			<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
 				<l:content>
 					<Label text="Description"/>
-					<Input id="name11" value="Steel Pole Inspection" editable="false">
+					<Input id="name11" value="{operationDetailModel>/Ltxa1}" editable="false">
 						<layoutData>
 							<l:GridData span="XL1 L4 M4 S4"/>
 						</layoutData>
@@ -26,7 +26,7 @@
 							<l:GridData span="S4" linebreakL="true" linebreakM="true" linebreakS="true"/>
 						</layoutData>
 					</Label>
-					<Input id="name14" value="{/?orderData/Ltxa1}" editable="false">
+					<Input id="name14" value="{operationDetailModel>/Arbpl}" editable="false">
 						<layoutData>
 							<l:GridData span="L4 M3 S3"/>
 						</layoutData>
@@ -36,7 +36,7 @@
 							<l:GridData span="L2"/>
 						</layoutData>
 					</Label>
-					<Input id="name007" value="{operationDetailModel>/ArbplDesc}" editable="false">
+					<Input id="name007" value="{operationDetailModel>/VWerks}" editable="false">
 						<layoutData>
 							<l:GridData span="L2 M1 S1"/>
 						</layoutData>
@@ -46,7 +46,7 @@
 							<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
 						</layoutData>
 					</Label>
-					<Input id="name10" value="{/?orderData/Fsavd}" editable="false">
+					<Input id="name10" value="{operationDetailModel>/Steus}" editable="false">
 						<layoutData>
 							<l:GridData span="XL1 L4 M4 S4"/>
 						</layoutData>
@@ -66,7 +66,7 @@
 							<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
 						</layoutData>
 					</Label>
-					<Input id="name126" value="{operationDetailModel>/SteusDesc}" editable="false">
+					<Input id="name126" value="{operationDetailModel>/Status}" editable="false">
 						<layoutData>
 							<l:GridData span="L4"/>
 						</layoutData>

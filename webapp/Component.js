@@ -25,7 +25,7 @@ sap.ui.define([
 			var that = this;
 			var odatamodel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV");
 			odatamodel.read(
-				"/HeaderSet?$filter=Userid eq '11153519'&$expand=NVHEADERTOOPERATIONS,NVHEADERTOCOMPONENTS",
+				"/HeaderSet?$filter=Userid eq '11153519'&$expand=NVHEADERTOOPERATIONS,NVHEADERTOCOMPONENTS,NVHEADERTOOBJECTS",
 				null, null, false,
 				function(responce) {
 					console.log(responce.results);
