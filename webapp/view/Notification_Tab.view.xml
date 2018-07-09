@@ -1,7 +1,22 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZWMReplacement.controller.Notification_Tab"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
 	
-		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+	<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="2"
+		labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="1"
+		singleContainerFullSize="false">
+		<f:content>
+			<Label text="Notification"/>
+			<Text text="{WODetModel>/Qmnum}" />
+			<Label text="Type" wrapping="true"/>
+			<Text text="{WODetModel>/Qmtxt}" />
+			<Label text="FuncLoc" wrapping="true"/>
+			<Text text="{WODetModel>/TplnrQmDesc}" />
+			<Label text="Equipment" wrapping="true"/>
+			<Text text="{WODetModel>/EqunrQmDesc}" />
+		</f:content>
+	</f:SimpleForm>
+	
+	<!--	<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
 			<l:content>
 				<Label text="Notification Type"/>
 				<Input id="name11" value="{WODetModel>/Qmnum}" editable="false">
@@ -40,6 +55,6 @@
 					</layoutData>
 				</Input>
 			</l:content>
-		</l:Grid>
+		</l:Grid>-->
 
 </mvc:View>

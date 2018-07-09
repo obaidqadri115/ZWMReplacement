@@ -1,0 +1,48 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" class="sapUiSizeCompact">
+	<Dialog title="Component-{ComponentDetailModel>/Matnr}" contentHeight="450px" contentWidth="1200px">
+		<content>
+			<f:SimpleForm id="componentsSFId" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3"
+				columnsL="2" columnsM="2" singleContainerFullSize="false">
+				<f:content>
+					<Label text="Material Desc."/>
+					<Text text="{ComponentDetailModel>/Maktx}"/>
+					<Label text="Description"/>
+					<Text text="{ComponentDetailModel>/Ltxa1}" />
+					<!--<Text text="{ComponentDetailModel>/Ltxa1}" />-->
+					<Label text="Item" wrapping="true"/>
+					<Text text="{ComponentDetailModel>/Posnr}" />
+					<Label text="Operation" wrapping="true"/>
+					<Text text="{ComponentDetailModel>/Axttx}" />
+					<Label text="Stock Type" wrapping="true"/>
+					<Text text="{ComponentDetailModel>/Fsavd}" />
+					<Label text="Required Quantity" wrapping="true"/>
+					<Text text="{ComponentDetailModel>/Bdmng}" />
+					<Label text="Plant" wrapping="true"/>
+					<Text text="Steel Pole Inspection Steel Pole" />
+					<Label text="Location" wrapping="true"/>
+					<Text text="{ComponentDetailModel/Axttx}" />
+						<core:Title text="" />
+					<Label text="Batch"/>
+					<Text text="{ComponentDetailModel/Tplnr}" />
+					<Label text="BinNum" wrapping="true"/>
+					<Text text="{ComponentDetailModel/Axttx}" />
+					<Label text="Commited Quantity"/>
+					<Text text="{ComponentDetailModel/Tplnr}" />
+					<Label text="Withdraw Quantity" wrapping="true"/>
+					<Text text="{ComponentDetailModel/Enmng}" />
+					<Label text="Reservation"/>
+					<Text text="{ComponentDetailModel/Tplnr}" />
+					<Label text="Reservationv Item" wrapping="true"/>
+					<Text text="{ComponentDetailModel/Axttx}" />
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<!--<beginButton>
+			<Button text="Edit" type="Accept" press="onCompEdit"></Button>
+		</beginButton>-->
+		<endButton>
+			<Button text="Close" press="onCloseCompDialog"></Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

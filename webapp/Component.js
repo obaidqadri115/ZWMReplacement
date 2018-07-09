@@ -37,6 +37,7 @@ sap.ui.define([
 				function(error) {
 					console.log(error);
 				});	
+				that.setModel(new JSONModel({}),"detailEditNoteModel");
 			}
 			//this.setModel(jModel); 
 			

@@ -1,13 +1,13 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" class="sapUiSizeCompact"
 	xmlns:table="sap.ui.table" controllerName="ZWMReplacement.controller.WorkOrderMainTab" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page >
-		<customHeader>
+	<Page title="Work Manager" >
+	<!--	<customHeader>
 			<Bar>
 				<contentLeft>
 					<Text text="Sap Work Manager"/>
 				</contentLeft>
 			</Bar>
-		</customHeader>
+		</customHeader>-->
 		<content>
 			<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
 				<items>
@@ -21,10 +21,10 @@
 				</items>
 			</IconTabBar>
 		</content>
-		<footer>
+	<!--	<footer>
 			<Toolbar>
 				<ToolbarSpacer/>
 			</Toolbar>
-		</footer>
+		</footer>-->
 	</Page>
 </mvc:View>

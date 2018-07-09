@@ -1,6 +1,43 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	controllerName="ZWMReplacement.controller.DetailTab" xmlns:html="http://www.w3.org/1999/xhtml">
-	<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
+	<f:SimpleForm id="componentsSFId" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="2"
+		labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="1"
+		singleContainerFullSize="false">
+		<f:content>
+			<Label text="Description"/>
+			<Text text="{WODetModel>/Ktext}" />
+			<Label text="Planning Unit" wrapping="true"/>
+			<Text text="{WODetModel>/IwerkDesc}" />
+			<Label text="Business Area" wrapping="true"/>
+			<Text text="{WODetModel>/GsberDesc}" />
+			<Label text="Work Center" wrapping="true"/>
+			<Text text="{WODetModel>/ArbplDesc}" />
+			<Label text="Work Center Plant" wrapping="true"/>
+			<Text text="{WODetModel>/WawrkDesc}" />
+			<Label text="Functional Location" wrapping="true"/>
+			<Text text="{WODetModel>/TplnrDesc}" />
+			<Label text="Equipment" wrapping="true"/>
+			<Text text="{WODetModel>/EqunrQmDesc}" />
+			<!--<Label text="{/?orderData/Axttx}" wrapping="true"/>-->
+			<!--<Label text="History"/>
+			<Text text="{WODetModel>/WawrkDesc}" />
+			<Label text="PRT"/>
+			<Text text="{WODetModel>/PriokDesc}" />-->
+			<!--<Label text="Notes" wrapping="true"/>
+			<Input value="" />-->
+		</f:content>
+	</f:SimpleForm>
+	<VBox>
+		<items>
+			<Label text="Notes:"/>
+			<TextArea value="{detailNotesData>/notes}" width="100%" enabled="{detailEditNoteModel>/enable}"/>
+			<HBox>
+				<Button type="Accept" visible="{detailEditNoteModel>/btnVisibility}" text="Save" press="onSaveDetailNotes" class="sapUiSmallMarginEnd"/>
+				<Button type="Reject" visible="{detailEditNoteModel>/btnVisibility}" text="Cancel" press="onCancelDetailNotes"/>
+			</HBox>
+		</items>
+	</VBox>
+<!--	<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
 		<l:content>
 			<Label text="Description"/>
 			<Input id="name11" value="{WODetModel>/Ktext}" editable="false">
@@ -94,5 +131,5 @@
 				</layoutData>
 			</Input>
 		</l:content>
-	</l:Grid>
+	</l:Grid>-->
 </mvc:View>

@@ -1,19 +1,29 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZWMReplacement.controller.WM_Master"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page >
-		<customHeader>
-			<Bar>
-				<contentLeft>
-					<Text text="Work Orders"/>
-				</contentLeft>
-			</Bar>
-		</customHeader>
+	<Page title="Work Orders">
 		<content>
 			<List id="orders" items="{WOModel>/}" mode="SingleSelectMaster" selectionChange="onSelectionChange">
 				<items>
-					<StandardListItem title="{WOModel>Aufnr}" type="Active" press="onSelectionChange"/>
+					<!--	<StandardListItem title="{WOModel>Aufnr}" type="Active" press="onSelectionChange"/> intro="{WOModel>Ktext}"-->
+					<ObjectListItem title="{WOModel>Aufnr}" type="Active">
+						<firstStatus>
+							<ObjectStatus text="{parts:[{path:'WOModel>PriokDesc'}],formatter : '.piority'}" state="None"/>
+						</firstStatus>
+						<!--<ObjectStatus text="{path: 'RequestStatus',formatter: '.claimStatusText'}" state="{ path: 'RequestStatus',formatter: '.claimStatus'}"/>-->
+						<attributes>
+							<!--{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}-->
+							<!--class="fontForApprovedAmt" {=${RequestStatus} === 'A' ? true:false}  "{WODetModel>Fsavd} - {WODetModel>Fsavz}" -->
+							<ObjectAttribute title="Last Date" text="{parts:[{path:'WOModel>Date'}],formatter : '.dateFormatter'}"/>
+							<ObjectAttribute title="Desc" text="{WOModel>Ktext}"/>
+						</attributes>
+					</ObjectListItem>
 				</items>
 			</List>
 		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
 	</Page>
 </mvc:View>

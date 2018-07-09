@@ -1,16 +1,24 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	controllerName="ZWMReplacement.controller.WM_Detail" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page>
-		<customHeader>
+		<!--<customHeader>
 			<Bar>
 				<contentLeft>
 					<Text text="Work Order : {WODetModel>/Aufnr} - Received "/>
 				</contentLeft>
-				<!--<contentMiddle>
-					<Text text="Work Order : {WODetModel>/Aufnr} - Received "/>
-				</contentMiddle>-->
 				<contentRight>
 					<Button icon="sap-icon://edit" press="onPressEdit" ariaLabelledBy="editButtonLabel"/>
+					<Button icon="sap-icon://action" press="onClick" ariaLabelledBy="actionButtonLabel"/>
+				</contentRight>
+			</Bar>
+		</customHeader>-->
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Text text="Work Order : {WODetModel>/Aufnr} - Received "/>
+				</contentMiddle>
+				<contentRight>
+					<Button icon="sap-icon://edit" visible="{detailEditNoteModel>/editBtn}" press="onPressEdit" ariaLabelledBy="editButtonLabel"/>
 					<Button icon="sap-icon://action" press="onClick" ariaLabelledBy="actionButtonLabel"/>
 				</contentRight>
 			</Bar>
@@ -43,8 +51,8 @@
 										<attributes>
 											<!--{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}-->
 											<!--class="fontForApprovedAmt" {=${RequestStatus} === 'A' ? true:false}  "{WODetModel>Fsavd} - {WODetModel>Fsavz}" -->
-											<ObjectAttribute title="Start" text="{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'} {WODetModel>Fsavz}"/>
-											<ObjectAttribute title="Finish" text="{parts:[{path:'WODetModel>Fsedd'},{path:'WODetModel>Fsedz'}],formatter : '.dateFormatter'} {WODetModel>Fsedz}"/> 
+											<ObjectAttribute title="Start" text="{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}"/>
+											<ObjectAttribute title="Finish" text="{parts:[{path:'WODetModel>Fsedd'},{path:'WODetModel>Fsedz'}],formatter : '.dateFormatter'}"/> 
 										</attributes> 
 									</ObjectListItem>
 								</items>
@@ -60,7 +68,7 @@
 									<!--	<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>VWerksDesc}"
 										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
 										-->
-									<ObjectListItem title="{WODetModel>Ltxa1}" type="Active" number="{WODetModel>Maktx}" numberUnit="">
+									<ObjectListItem title="{WODetModel>Maktx}" type="Active" intro="{WODetModel>Ltxa1}" number="{WODetModel>Posnr}" numberUnit="">
 										<firstStatus>
 											<!--<ObjectStatus text="{WODetModel>Arbpl}" state="None"/>-->
 										</firstStatus>
