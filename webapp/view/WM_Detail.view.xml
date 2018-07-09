@@ -30,7 +30,7 @@
 				<IconTabFilter text="Operations">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="notificationList1" items="{WODetModel>/NVHEADERTOOPERATIONS/results}" itemPress="onListItemPressOperations">
+							<List id="operationsNotificationList" items="{WODetModel>/NVHEADERTOOPERATIONS/results}" itemPress="onListItemPressOperations">
 								<items>
 									<!--	<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>VWerksDesc}"
 										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
@@ -55,12 +55,33 @@
 				<IconTabFilter text="Components">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="notificationList" items="{WODetModel>/NVHEADERTOCOMPONENTS/results}">
+							<!--<List id="notificationList" items="{WODetModel>/NVHEADERTOCOMPONENTS/results}">-->
+							<!--	<items>-->
+							<!--		<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>Maktx}"-->
+							<!--			datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPress"/>-->
+							<!--	</items>-->
+							<!--</List>-->
+							
+							<List id="componentsNotificationList" items="{WODetModel>/NVHEADERTOCOMPONENTS/results}" itemPress="onListItemPress">
 								<items>
-									<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>Maktx}"
-										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPress"/>
+									<!--	<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>VWerksDesc}"
+										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
+										-->
+									<ObjectListItem title="{WODetModel>Ltxa1}" type="Active" number="{WODetModel>Maktx}" numberUnit="">
+										<firstStatus>
+											<!--<ObjectStatus text="{WODetModel>Arbpl}" state="None"/>-->
+										</firstStatus>
+										<!--<ObjectStatus text="{path: 'RequestStatus',formatter: '.claimStatusText'}" state="{ path: 'RequestStatus',formatter: '.claimStatus'}"/>-->
+										<attributes>
+											<!--{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}-->
+											<!--class="fontForApprovedAmt" {=${RequestStatus} === 'A' ? true:false}  "{WODetModel>Fsavd} - {WODetModel>Fsavz}" -->
+											<ObjectAttribute title="Requirement Quantity" text= "{WODetModel>Bdmng}"/>
+											<ObjectAttribute title="Withdrawal Quantity" text= "{WODetModel>Enmng}"/> 
+										</attributes> 
+									</ObjectListItem>
 								</items>
 							</List>
+							
 						</l:content>
 					</l:VerticalLayout>
 				</IconTabFilter>
@@ -68,7 +89,7 @@
 				<IconTabFilter text="Objects">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="notificationList2" items="{WODetModel>/NVHEADERTOOBJECTS/results}">
+							<List id="objectsNotificationList" items="{WODetModel>/NVHEADERTOOBJECTS/results}">
 								<items>
 									<ObjectListItem title="Object {WODetModel>SermatGuid}" type="Active" number="" numberUnit="">
 										<firstStatus>
