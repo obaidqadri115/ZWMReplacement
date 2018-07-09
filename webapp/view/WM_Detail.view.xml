@@ -55,13 +55,6 @@
 				<IconTabFilter text="Components">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<!--<List id="notificationList" items="{WODetModel>/NVHEADERTOCOMPONENTS/results}">-->
-							<!--	<items>-->
-							<!--		<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>Maktx}"-->
-							<!--			datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPress"/>-->
-							<!--	</items>-->
-							<!--</List>-->
-							
 							<List id="componentsNotificationList" items="{WODetModel>/NVHEADERTOCOMPONENTS/results}" itemPress="onListItemPress">
 								<items>
 									<!--	<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>VWerksDesc}"
