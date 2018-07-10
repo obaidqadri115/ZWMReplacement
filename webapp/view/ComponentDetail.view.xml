@@ -15,7 +15,7 @@
 		<l:Grid defaultSpan="L2 M2 S2" class="sapUiSmallMarginTop">
 			<l:content>
 				<Label text="Description"/>
-				<Input id="name11" value="Steel Pole Inspection" editable="false">
+				<Input id="name11" value="{ComponentDetailModel>/Maktx}" editable="false">
 					<layoutData>
 						<l:GridData span="XL1 L4 M4 S4"/>
 					</layoutData>
@@ -35,7 +35,7 @@
 						<l:GridData span="L2"/>
 					</layoutData>
 				</Label>
-				<Input id="name007" value="{ComponentDetailModel>/Axttx}" editable="false">
+				<Input id="name007" value="{ComponentDetailModel>/Rspos}" editable="false">
 					<layoutData>
 						<l:GridData span="L2 M1 S1"/>
 					</layoutData>
@@ -45,7 +45,7 @@
 						<l:GridData span="S5" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name10" value="{ComponentDetailModel>/Fsavd}" editable="false">
+				<Input id="name10" value="{ComponentDetailModel>/Postp}" editable="false">
 					<layoutData>
 						<l:GridData span="XL1 L4 M4 S4"/>
 					</layoutData>
@@ -65,7 +65,7 @@
 						<l:GridData span="S1" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name126" value="Steel Pole Inspection Steel Pole" editable="false">
+				<Input id="name126" value="{ComponentDetailModel>/Werks}" editable="false">
 					<layoutData>
 						<l:GridData span="L4"/>
 					</layoutData>
@@ -75,7 +75,7 @@
 						<l:GridData span="XL1 L2 M4 S4"/>
 					</layoutData>
 				</Label>
-				<Input id="name165" value="{ComponentDetailModel/Axttx}" editable="false">
+				<Input id="name165" value="{ComponentDetailModel>/Lgort}" editable="false">
 					<layoutData>
 						<l:GridData span="L2 M1 S1"/>
 					</layoutData>
@@ -85,7 +85,7 @@
 						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name31" value="{ComponentDetailModel/Tplnr}" editable="false">
+				<Input id="name31" value="{ComponentDetailModel>/Charg}" editable="false">
 					<layoutData>
 						<l:GridData span="XL1 L4 M4 S4"/>
 					</layoutData>
@@ -95,7 +95,7 @@
 						<l:GridData span="XL1 L2 M4 S4"/>
 					</layoutData>
 				</Label>
-				<Input id="name175" value="{ComponentDetailModel/Axttx}" editable="false">
+				<Input id="name175" value="{ComponentDetailModel>/Lgpla}" editable="false">
 					<layoutData>
 						<l:GridData span="L2 M1 S1"/>
 					</layoutData>
@@ -105,7 +105,7 @@
 						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name32" value="{ComponentDetailModel/Tplnr}" editable="false">
+				<Input id="name32" value="{ComponentDetailModel>/Vmeng}" editable="false">
 					<layoutData>
 						<l:GridData span="XL1 L4 M4 S4"/>
 					</layoutData>
@@ -115,7 +115,7 @@
 						<l:GridData span="XL1 L2 M4 S4"/>
 					</layoutData>
 				</Label>
-				<Input id="name265" value="{ComponentDetailModel/Enmng}" editable="false">
+				<Input id="name265" value="{ComponentDetailModel>/Enmng}" editable="false">
 					<layoutData>
 						<l:GridData span="L2 M1 S1"/>
 					</layoutData>
@@ -125,17 +125,17 @@
 						<l:GridData span="L2 M2 S2" linebreakL="true" linebreakM="true" linebreakS="true"/>
 					</layoutData>
 				</Label>
-				<Input id="name322" value="{ComponentDetailModel/Tplnr}" editable="false">
+				<Input id="name322" value="{ComponentDetailModel>/Rsnum}" editable="false">
 					<layoutData>
 						<l:GridData span="XL1 L4 M4 S4"/>
 					</layoutData>
 				</Input>
-				<Label text="Reservationv Item" wrapping="true">
+				<Label text="Reservation Item" wrapping="true">
 					<layoutData>
 						<l:GridData span="XL1 L2 M4 S4"/>
 					</layoutData>
 				</Label>
-				<Input id="name665" value="{ComponentDetailModel/Axttx}" editable="false">
+				<Input id="name665" value="{ComponentDetailModel>/Rspos}" editable="false">
 					<layoutData>
 						<l:GridData span="L2 M1 S1"/>
 					</layoutData>
