@@ -108,7 +108,13 @@
 				</IconTabFilter>
 				
 				<IconTabFilter text="Attachments"></IconTabFilter>
-				<IconTabFilter text="Maps"></IconTabFilter>
+				<IconTabFilter text="Maps">
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+                		<l:content>
+                			 <html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geowm/index.html" target="_top" height="400px" width="800px"></html:iframe>
+                		</l:content>
+                  	</l:VerticalLayout>
+				</IconTabFilter>
 			</items>
 		</IconTabBar>
 	</Page>
