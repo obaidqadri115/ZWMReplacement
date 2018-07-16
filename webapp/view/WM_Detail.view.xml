@@ -107,7 +107,25 @@
 					</l:VerticalLayout>
 				</IconTabFilter>
 				
-				<IconTabFilter text="Attachments"></IconTabFilter>
+				<IconTabFilter text="Attachments">
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<l:content>
+							<List id="attachmentList" items="{WODetModel>/NVHEADERTOOBJECTS/results}">
+								<items>
+									<ObjectListItem title="Name:" type="Active" number="" numberUnit="">
+										<firstStatus>
+											<ObjectStatus text="Status:" state="None"/>
+											<!--<ObjectStatus text="      {WODetModel>FunctLoc}" state="None"/>-->
+										</firstStatus>
+										<attributes>
+											<ObjectAttribute title="Type" text=""/>
+										</attributes> 
+									</ObjectListItem>
+								</items>
+							</List>
+						</l:content>
+					</l:VerticalLayout>
+				</IconTabFilter>
 				<IconTabFilter text="Maps">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
                 		<l:content>
