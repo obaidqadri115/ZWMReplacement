@@ -1,11 +1,11 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller","sap/ui/model/json/JSONModel"
-], function (Controller,JSONModel) {
+	"sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel"
+], function(Controller, JSONModel) {
 	"use strict";
 
 	return Controller.extend("ZWMReplacement.controller.WM_Detail", {
 
-		onInit: function () {
+		onInit: function() {
 			this.getOwnerComponent().getRouter().getRoute("workOrderDetail").attachPatternMatched(this._onRouteMatched, this);
 		},
 
@@ -16,7 +16,7 @@ sap.ui.define([
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("componentMasterDetail");
 			},*/
-		onListItemPress: function (oEvent) {
+		onListItemPress: function(oEvent) {
 			var data = this.getView().getModel("WODetModel").getData().NVHEADERTOCOMPONENTS.results;
 			sap.ui.getCore().setModel(new sap.ui.model.json.JSONModel(data), "woComponentModel");
 			/*	//var data = this.getView().getModel("WOModel").getData()[this.selectedWorkOrder].NVHEADERTOCOMPONENTS.results;
@@ -35,7 +35,7 @@ sap.ui.define([
 			this.compDialog.open(); //
 		},
 
-		onListItemPressOperations: function (oEvent) {
+		onListItemPressOperations: function(oEvent) {
 			var data = this.getView().getModel("WODetModel").getData().NVHEADERTOOPERATIONS.results;
 			sap.ui.getCore().setModel(new sap.ui.model.json.JSONModel(data), "woOperationModel");
 
@@ -47,7 +47,7 @@ sap.ui.define([
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("editWO");
 			},*/
-		onPressEdit: function (oEvent) {
+		onPressEdit: function(oEvent) {
 			/*var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("editWO");*/
 			oEvent.oSource.setVisible(false);
@@ -57,6 +57,27 @@ sap.ui.define([
 			this.getView().getModel("detailEditNoteModel").setProperty("/enable", true);
 			this.getView().getModel("detailEditNoteModel").setProperty("/btnVisibility", true);
 		},
+
+		onPressAdd: function(oEvent) {
+			// var data = this.getView().getModel("WODetModel").getData().NVHEADERTOCOMPONENTS.results;
+			// sap.ui.getCore().setModel(new sap.ui.model.json.JSONModel(data), "woComponentModel");
+
+			var oFileUploader = sap.ui.getCore().byId("AttachUploader");
+
+			if (!this.attachmentDialog) {
+				this.attachmentDialog = sap.ui.xmlfragment("ZWMReplacement.fragments.attachment", this);
+				//this.getView().addDependent(this.attachmentDialog);
+			}
+			// var selObj = oEvent.mParameters.listItem.getBindingContext("WODetModel").getObject();
+
+			// selObj.editable = false;
+			// var clonedObj = $.extend({}, true, selObj);
+			// this.compDialog.setModel(new JSONModel(clonedObj), "ComponentDetailModel");
+			// sap.ui.getCore().byId("componentsSFId").bindElement("/");
+
+			this.attachmentDialog.open();
+			oFileUploader.setValue("");
+		},
 		/*	_onRouteMatched: function (oEvent) {
 				var detailData = oEvent.getParameter("arguments");
 				this.selectedWorkOrder = detailData.WONum;
@@ -64,7 +85,7 @@ sap.ui.define([
 				var jsonModel = new sap.ui.model.json.JSONModel(model);
 				this.getView().setModel(jsonModel, "WODetModel");
 			},*/
-		_onRouteMatched: function (oEvent) {
+		_onRouteMatched: function(oEvent) {
 			var detailData = oEvent.getParameter("arguments");
 			this.selectedWorkOrder = detailData.WONum;
 			var model = this.getView().getModel("WOModel").getData()[detailData.WONum];
@@ -77,7 +98,7 @@ sap.ui.define([
 			this.getModel("detailEditNoteModel").setData(new JSONModel(detailEditNoteData));*/
 			//sap.ui.getCore().setModel(new JSONModel([]), "detailNotesData");
 		},
-		dateFormatter: function (value1, value2) {
+		dateFormatter: function(value1, value2) {
 			var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({
 				pattern: "dd/MM/yyyy"
 			});
@@ -92,8 +113,93 @@ sap.ui.define([
 			}
 			return date + " " + timeStr;
 		},
-		onCloseCompDialog: function () {
+		//////////////////////////////
+		onAttachUpload: function(oEvent) {
+			var oFileUploader = sap.ui.getCore().byId("AttachUploader");
+			var sFileName = oFileUploader.getValue();
+			var oView = this.getView();
+			if (!oFileUploader.getValue()) {
+				sap.m.MessageToast.show("Choose a file first");
+				return;
+			}
+
+			// var file = jQuery.sap.domById(oFileUploader.getId() + "-fu").files[0];
+			// var base64_marker = 'data:' + file.type + ';base64,';
+			// var reader = new FileReader();
+
+			// // On load 
+			// reader.onload = (function(file) {
+			// 	return function(evt) {
+			// 		// Locate base64_content 
+			// 		var base64Index = evt.target.result.index0f(base64_marker) + base64_marker.length;
+			// 		// Get base64 content
+			// 		var base64 = evt.target.result.substring(base64Index);
+			// 		var sTasksService = window.location.origin + "/sap/opu/odata/RUNUP/MYRUNUPTASKSSRV/RunupTasks";
+			// 		var sAttachService = window.location.origin + "/sap/opu/odata/RUNUP/MYRUNUPTASKSSRV/RunupNewAttachments";
+			// 		var oViewModel = oView.getModel();
+			// 		var oContext = oView.getBindingContext();
+			// 		var oRunupTask = oViewModel.getProperty(oContext.getPath());
+			// 		var oDataModel = sap.ui.getCore().getModel();
+			// 		var sWorkitemld = JSON.stringify(oRunupTask.WiId);
+			// 		var service_url = sAttachService;
+			// 		var token;
+			// 		$.ajaxSetup({
+			// 			cache: false
+			// 		});
+			// 		jQuery.ajax({
+			// 			url: service_url,
+			// 			async: false,
+			// 			dataType: 'json',
+			// 			cache: false,
+			// 			data: base64,
+			// 			type: "POST",
+			// 			beforeSend: function(xhr) {
+			// 				xhr.setRequestHeader("X-CSRF-Token", token);
+			// 				xhr.setRequestHeader("Content-Type", file.type);
+			// 				xhr.setRequestHeader("slug", sFileName);
+			// 				xhr.setRequestHeader("WorkitemId", oRunupTask.WiId);
+			// 			},
+			// 			success: function(odata) {
+			// 				sap.m.MessageToast.show("File successfully uploaded");
+			// 				oFileUploader.setValue("");
+			// 			},
+			// 			error: function(odata) {
+			// 				sap.m.MessageToast.show("File Upload error");
+			// 			}
+			// 		});
+			// 	};
+			// })(file);
+			// // Read file 
+			// reader.readAsDataURL(file);
+			// oView = this.getView();
+			// oAttachDataModel = this.oDataModel;
+		},
+
+		handleValueChange: function(oEvent) {
+			debugger;
+			var files = oEvent.mParameters.files[0];
+			this.getView().getModel("WODetModel").oData.documents.results.push(files);
+			this.getView().getModel("WODetModel").refresh();
+			this.attachmentDialog.close();
+
+		},
+		
+		deleteAttachment: function(oEvent) {
+			debugger;
+			var li = oEvent.mParameters.listItem;
+			var indexli = oEvent.oSource.indexOfItem(li);
+			this.getView().getModel("WODetModel").oData.documents.results.splice(indexli,1);
+			this.getView().getModel("WODetModel").refresh();
+		},
+
+		//////////////////////////////
+		onCloseCompDialog: function() {
 			this.compDialog.close();
+		},
+		OnCloseAttachDialog: function() {
+			var oFileUploader = sap.ui.getCore().byId("AttachUploader");
+			oFileUploader.setValue("");
+			this.attachmentDialog.close();
 		}
 
 	});

@@ -1,9 +1,10 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" class="sapUiSizeCompact">
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	class="sapUiSizeCompact">
 	<Dialog title="Component-{ComponentDetailModel>/Matnr}" contentHeight="450px" contentWidth="1200px">
 		<content>
-			<f:SimpleForm id="componentsSFId" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
-				labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3"
-				columnsL="2" columnsM="2" singleContainerFullSize="false">
+			<f:SimpleForm id="componentsSFId" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+				singleContainerFullSize="false">
 				<f:content>
 					<Label text="Material Desc."/>
 					<Text text="{ComponentDetailModel>/Maktx}"/>
@@ -11,30 +12,30 @@
 					<!--<Text text="{ComponentDetailModel>/Maktx}" />-->
 					<!--<Text text="{ComponentDetailModel>/Ltxa1}" />-->
 					<Label text="Item" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Posnr}" />
+					<Text text="{ComponentDetailModel>/Posnr}"/>
 					<Label text="Operation" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Rspos}" />
+					<Text text="{ComponentDetailModel>/Rspos}"/>
 					<Label text="Stock Type" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Postp}" />
+					<Text text="{ComponentDetailModel>/Postp}"/>
 					<Label text="Required Quantity" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Bdmng}" />
+					<Text text="{ComponentDetailModel>/Bdmng}"/>
 					<Label text="Plant" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Werks}" />
+					<Text text="{ComponentDetailModel>/Werks}"/>
 					<Label text="Location" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Lgort}" />
-						<core:Title text="" />
+					<Text text="{ComponentDetailModel>/Lgort}"/>
+					<core:Title text=""/>
 					<Label text="Batch"/>
-					<Text text="{ComponentDetailModel>/Charg}" />
+					<Text text="{ComponentDetailModel>/Charg}"/>
 					<Label text="BinNum" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Lgpla}" />
+					<Text text="{ComponentDetailModel>/Lgpla}"/>
 					<Label text="Committed Quantity"/>
-					<Text text="{ComponentDetailModel>/Vmeng}" />
+					<Text text="{ComponentDetailModel>/Vmeng}"/>
 					<Label text="Withdraw Quantity" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Enmng}" />
+					<Text text="{ComponentDetailModel>/Enmng}"/>
 					<Label text="Reservation"/>
-					<Text text="{ComponentDetailModel>/Rsnum}" />
+					<Text text="{ComponentDetailModel>/Rsnum}"/>
 					<Label text="Reservationv Item" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Rspos}" />
+					<Text text="{ComponentDetailModel>/Rspos}"/>
 				</f:content>
 			</f:SimpleForm>
 		</content>

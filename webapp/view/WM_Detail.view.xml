@@ -18,6 +18,7 @@
 					<Text text="Work Order : {WODetModel>/Aufnr} - Received "/>
 				</contentMiddle>
 				<contentRight>
+					<Button icon="sap-icon://add" visible="true" press="onPressAdd" ariaLabelledBy="addButtonLabel"/>
 					<Button icon="sap-icon://edit" visible="{detailEditNoteModel>/editBtn}" press="onPressEdit" ariaLabelledBy="editButtonLabel"/>
 					<Button icon="sap-icon://action" press="onClick" ariaLabelledBy="actionButtonLabel"/>
 				</contentRight>
@@ -110,15 +111,14 @@
 				<IconTabFilter text="Attachments">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="attachmentList" items="{WODetModel>/NVHEADERTOOBJECTS/results}">
+							<List id="attachmentList" items="{WODetModel>/documents/results}"  mode="Delete" delete="deleteAttachment" itemPress="onListItemPressAttachment">
 								<items>
-									<ObjectListItem title="Name:" type="Active" number="" numberUnit="">
+									<ObjectListItem title="Name:{WODetModel>name}" type="Active" number="" numberUnit="">
 										<firstStatus>
-											<ObjectStatus text="Status:" state="None"/>
-											<!--<ObjectStatus text="      {WODetModel>FunctLoc}" state="None"/>-->
+											<ObjectStatus text="Size:{WODetModel>size}" state="None"/>
 										</firstStatus>
 										<attributes>
-											<ObjectAttribute title="Type" text=""/>
+											<ObjectAttribute title="Type" text="{WODetModel>type}"/>
 										</attributes> 
 									</ObjectListItem>
 								</items>
@@ -130,6 +130,7 @@
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
                 		<l:content>
                 			 <html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geowm/index.html" target="_top" height="400px" width="800px"></html:iframe>
+                			 <!--<html:iframe id="map_iframe" src="http://10.35.20.185:8080/geoeam/index.html?id=000001005838&locale=en" target="_top" height="400px" width="800px"></html:iframe>-->
                 		</l:content>
                   	</l:VerticalLayout>
 				</IconTabFilter>
