@@ -111,14 +111,14 @@
 				<IconTabFilter text="Attachments">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="attachmentList" items="{WODetModel>/documents/results}"  mode="Delete" delete="deleteAttachment" itemPress="onListItemPressAttachment">
+							<List id="attachmentList" items="{WODetModel>/NVHEADERTOATTACHMENTS/results}"  mode="Delete" delete="deleteAttachment" itemPress="onListItemPressAttachment">
 								<items>
-									<ObjectListItem title="Name:{WODetModel>name}" type="Active" number="" numberUnit="">
+									<ObjectListItem title="Name:{WODetModel>Name}" type="Active" number="" numberUnit="">
 										<firstStatus>
-											<ObjectStatus text="Size:{WODetModel>size}" state="None"/>
+											<ObjectStatus text="Description:{WODetModel>Description}" state="None"/>
 										</firstStatus>
 										<attributes>
-											<ObjectAttribute title="Type" text="{WODetModel>type}"/>
+											<ObjectAttribute title="Type"  text="{WODetModel>Type}"/>
 										</attributes> 
 									</ObjectListItem>
 								</items>
