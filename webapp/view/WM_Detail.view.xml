@@ -134,18 +134,10 @@
 								<items>
 									<ObjectListItem title="Name:{WODetModel>Name}" type="Active" number="" numberUnit="">
 										<firstStatus>
-<<<<<<< Upstream, based on e5cba51f68e2b04d3709af1e937f01c049b4a0de
 											<ObjectStatus text="Description:{WODetModel>Description}" state="None"/>
-=======
-											<ObjectStatus text="{WODetModel>DocumentNo}" state="None"/>
->>>>>>> 614593e Data Binding for Attachments 
 										</firstStatus>
 										<attributes>
-<<<<<<< Upstream, based on e5cba51f68e2b04d3709af1e937f01c049b4a0de
 											<ObjectAttribute title="Type"  text="{WODetModel>Type}"/>
-=======
-											<ObjectAttribute title="Type" text="{WODetModel>Type}"/>
->>>>>>> 614593e Data Binding for Attachments 
 										</attributes> 
 									</ObjectListItem>
 								</items>
