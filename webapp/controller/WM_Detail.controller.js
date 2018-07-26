@@ -178,7 +178,7 @@ sap.ui.define([
 		handleValueChange: function(oEvent) {
 			debugger;
 			var files = oEvent.mParameters.files[0];
-			this.getView().getModel("WODetModel").oData.documents.results.push(files);
+			this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results.push(files);
 			this.getView().getModel("WODetModel").refresh();
 			this.attachmentDialog.close();
 
@@ -188,7 +188,7 @@ sap.ui.define([
 			debugger;
 			var li = oEvent.mParameters.listItem;
 			var indexli = oEvent.oSource.indexOfItem(li);
-			this.getView().getModel("WODetModel").oData.documents.results.splice(indexli,1);
+			this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results.splice(indexli,1);
 			this.getView().getModel("WODetModel").refresh();
 		},
 

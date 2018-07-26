@@ -108,6 +108,25 @@
 					</l:VerticalLayout>
 				</IconTabFilter>
 				
+				<!--<IconTabFilter text="Attachments">-->
+				<!--	<l:VerticalLayout class="sapUiContentPadding" width="100%">-->
+				<!--		<l:content>-->
+				<!--			<List id="attachmentList" items="{WODetModel>/documents/results}"  mode="Delete" delete="deleteAttachment" itemPress="onListItemPressAttachment">-->
+				<!--				<items>-->
+				<!--					<ObjectListItem title="Name:{WODetModel>name}" type="Active" number="" numberUnit="">-->
+				<!--						<firstStatus>-->
+				<!--							<ObjectStatus text="Size:{WODetModel>size}" state="None"/>-->
+				<!--						</firstStatus>-->
+				<!--						<attributes>-->
+				<!--							<ObjectAttribute title="Type" text="{WODetModel>type}"/>-->
+				<!--						</attributes> -->
+				<!--					</ObjectListItem>-->
+				<!--				</items>-->
+				<!--			</List>-->
+				<!--		</l:content>-->
+				<!--	</l:VerticalLayout>-->
+				<!--</IconTabFilter>-->
+				
 				<IconTabFilter text="Attachments">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
@@ -115,10 +134,18 @@
 								<items>
 									<ObjectListItem title="Name:{WODetModel>Name}" type="Active" number="" numberUnit="">
 										<firstStatus>
+<<<<<<< Upstream, based on e5cba51f68e2b04d3709af1e937f01c049b4a0de
 											<ObjectStatus text="Description:{WODetModel>Description}" state="None"/>
+=======
+											<ObjectStatus text="{WODetModel>DocumentNo}" state="None"/>
+>>>>>>> 614593e Data Binding for Attachments 
 										</firstStatus>
 										<attributes>
+<<<<<<< Upstream, based on e5cba51f68e2b04d3709af1e937f01c049b4a0de
 											<ObjectAttribute title="Type"  text="{WODetModel>Type}"/>
+=======
+											<ObjectAttribute title="Type" text="{WODetModel>Type}"/>
+>>>>>>> 614593e Data Binding for Attachments 
 										</attributes> 
 									</ObjectListItem>
 								</items>
@@ -126,6 +153,7 @@
 						</l:content>
 					</l:VerticalLayout>
 				</IconTabFilter>
+				
 				<IconTabFilter text="Maps">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
                 		<l:content>
