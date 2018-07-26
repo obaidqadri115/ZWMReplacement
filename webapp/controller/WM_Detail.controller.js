@@ -178,7 +178,11 @@ sap.ui.define([
 		handleValueChange: function(oEvent) {
 			debugger;
 			var files = oEvent.mParameters.files[0];
-			this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results.push(files);
+			var data = {
+						Name: files.name,
+						Type: files.type
+			};
+			this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results.push(data);
 			this.getView().getModel("WODetModel").refresh();
 			this.attachmentDialog.close();
 
