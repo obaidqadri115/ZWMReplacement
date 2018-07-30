@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog xmlns:b="sap.suite.ui.commons" xmlns:m="sap.m" xmlns="sap.ui.commons" xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout.form"
+		title="Show Attachment" resizable="false" draggable="false" showHeader="false" horizontalScrolling="false" ContentWidth="850px">
+		<content>
+			<l:SimpleForm editable="true">
+				<l:content>
+						<!--<Image src= "https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid='12EFDB6B857E1EE893BD907E632CC5AB')/$value">-->
+						<!--</Image>-->
+						<Image src="https://www.w3schools.com/tags/tag_iframe.asp" height="400px" width="800px"></Image>
+						<!--<html src="https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid='12EFDB6B857E1EE893BD907E632CC5AB')/$value" height="100%" width="100%"></html>-->
+				</l:content>
+			</l:SimpleForm>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>
