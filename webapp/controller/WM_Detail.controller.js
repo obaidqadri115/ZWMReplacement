@@ -179,49 +179,61 @@ sap.ui.define([
 			debugger;
 			var files = oEvent.mParameters.files[0];
 			var data = {
-						Name: files.name,
-						Type: files.type
+				Name: files.name,
+				Type: files.type
 			};
 			this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results.push(data);
 			this.getView().getModel("WODetModel").refresh();
 			this.attachmentDialog.close();
 
 		},
-		
+
 		deleteAttachment: function(oEvent) {
 			debugger;
 			var li = oEvent.mParameters.listItem;
 			var indexli = oEvent.oSource.indexOfItem(li);
-			this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results.splice(indexli,1);
+			this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results.splice(indexli, 1);
 			this.getView().getModel("WODetModel").refresh();
 		},
-		
+
 		onListItemPressAttachment: function(oEvent) {
 			debugger;
+			 
 			var li = oEvent.mParameters.listItem;
 			var indexli = oEvent.oSource.indexOfItem(li);
-			
+
 			var ObjID = this.getView().getModel("WODetModel").oData.NVHEADERTOATTACHMENTS.results[indexli].Objid;
 			// var a = parseInt(ObjID);
 			//var that = this;
-			
-			var str = "https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid='12EFDB6B857E1EE893BD907E632CC5AB')/$value";
+
+			if (ObjID === undefined) {
+				alert("Item not yet saved in server");
+			} else if (ObjID === "")
+			{
+				alert("No ObjID defined for this item in server");
+			}
+			else {
+				window.open("https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid='"+ObjID+"')/$value");
+			}
+
+			/*var str =
+				"https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid='12EFDB6B857E1EE893BD907E632CC5AB')/$value";
 			var pos = str.indexOf("=");
-			var res = str.slice(0,pos+2);
+			var res = str.slice(0, pos + 2);
 			var text2 = "')/$value";
 			var text3 = res.concat("", ObjID);
 			var text4 = text3.concat("", text2);
-			window.open(text4);
+			window.open(text4);*/
 			// window.open("https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid="+ObjID+")/$value");
-			
-		/*	if (!this.showAttachmentDialog) {
-				this.showAttachmentDialog = sap.ui.xmlfragment("ZWMReplacement.fragments.showAttachment", this);
-				//this.getView().addDependent(this.showAttachmentDialog);
-			}
-			
-			this.showAttachmentDialog.open();
-			
-			this.getView().getModel("WODetModel").refresh();*/
+
+			/*	if (!this.showAttachmentDialog) {
+					this.showAttachmentDialog = sap.ui.xmlfragment("ZWMReplacement.fragments.showAttachment", this);
+					//this.getView().addDependent(this.showAttachmentDialog);
+				}
+				
+				this.showAttachmentDialog.open();
+				
+				this.getView().getModel("WODetModel").refresh();*/
 
 		},
 
