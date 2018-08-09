@@ -91,7 +91,7 @@ sap.ui.define([
 			var model = this.getView().getModel("WOModel").getData()[detailData.WONum];
 			var jsonModel = new sap.ui.model.json.JSONModel(model);
 			this.getView().setModel(jsonModel, "WODetModel");
-			
+
 			debugger;
 			// this.byId("map_iframe")._xContent.src = model.NVHEADERTOWOMAP.Url.replace("http","https");
 			/*var detailEditNoteData = {
@@ -100,6 +100,17 @@ sap.ui.define([
 			};
 			this.getModel("detailEditNoteModel").setData(new JSONModel(detailEditNoteData));*/
 			//sap.ui.getCore().setModel(new JSONModel([]), "detailNotesData");
+			/*var index = event.mParameters.arguments.context;
+			var mapsArr = this.MasterRef.getView().getModel("workOrders").getData()[index].NVHEADERTOWOMAP;
+			var url = mapsArr.Url.replace("http", "https");*/
+
+			/*var url = this.getView().getModel("WODetModel").oData.NVHEADERTOWOMAP.Url;
+			url = url.replace("http", "https");*/
+			
+			var url = "https://hved.utl.accenture.com/geoeam-au/index.html?id=1007193&locale=en";
+			var frame = "<iframe src=" + url + " width='100%' height='550px'></iframe>";
+			this.byId("mapsId").setContent(frame);
+
 		},
 		dateFormatter: function(value1, value2) {
 			var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({
@@ -201,7 +212,7 @@ sap.ui.define([
 
 		onListItemPressAttachment: function(oEvent) {
 			debugger;
-			 
+
 			var li = oEvent.mParameters.listItem;
 			var indexli = oEvent.oSource.indexOfItem(li);
 
@@ -211,12 +222,11 @@ sap.ui.define([
 
 			if (ObjID === undefined) {
 				alert("Item not yet saved in server");
-			} else if (ObjID === "")
-			{
+			} else if (ObjID === "") {
 				alert("No ObjID defined for this item in server");
-			}
-			else {
-				window.open("https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid='"+ObjID+"')/$value");
+			} else {
+				window.open("https://hved.utl.accenture.com/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV/AttDownloadSet(Objid='" + ObjID +
+					"')/$value");
 			}
 
 			/*var str =

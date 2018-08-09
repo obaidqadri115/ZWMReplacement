@@ -103,8 +103,9 @@
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
 							<!--<html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geowm/index.html" target="_top" height="400px" width="800px"></html:iframe>-->
-							<html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geoeam-au/index.html" target="_top" height="400px" width="800px"></html:iframe>
-							<!--<html:iframe id="map_iframe" src="http://10.35.20.185:8080/geoeam/index.html?id=1005836&locale=en" target="_top" height="400px" width="800px"></html:iframe>-->
+							<!--<html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geoeam-au/index.html" target="_top" height="400px" width="800px"></html:iframe>-->
+							<core:HTML id="mapsId"></core:HTML>
+							<!--<html:iframe id="map_iframe" src="http://10.35.20.185:8080/geoeam/index.html?id=1007193&locale=en" target="_top" height="400px" width="800px"></html:iframe>-->
 							<!--<html:iframe id="map_iframe" src=""></html:iframe>-->
 							<!--<html:iframe id="map_iframe" src="http://10.35.20.185:8080/geoeam/index.html?id=000001005838&locale=en" target="_top" height="400px" width="800px"></html:iframe>-->
 						</l:content>
