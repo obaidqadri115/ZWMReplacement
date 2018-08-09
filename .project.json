@@ -10,5 +10,19 @@
     "account": "p2000349780trial",
     "name": "zwmreplacement",
     "lastVersionWeTriedToDeploy": "1.0.4"
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZEAM_WM_FIORI_APP_SRV/",
+    "metadataFilePath": "localService/metadata.xml",
+    "mockRequestsFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "",
+    "defaultLanguage": "",
+    "defaultI18NPropertyFile": "",
+    "resourceModelName": ""
   }
 }

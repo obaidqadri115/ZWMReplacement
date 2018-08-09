@@ -91,6 +91,9 @@ sap.ui.define([
 			var model = this.getView().getModel("WOModel").getData()[detailData.WONum];
 			var jsonModel = new sap.ui.model.json.JSONModel(model);
 			this.getView().setModel(jsonModel, "WODetModel");
+			
+			debugger;
+			// this.byId("map_iframe")._xContent.src = model.NVHEADERTOWOMAP.Url.replace("http","https");
 			/*var detailEditNoteData = {
 				enable:false,
 				btnVisibility:false

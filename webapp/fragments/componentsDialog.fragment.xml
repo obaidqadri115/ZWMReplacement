@@ -6,35 +6,35 @@
 				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
 				singleContainerFullSize="false">
 				<f:content>
-					<Label text="Material Desc."/>
+					<Label design="Bold" text="Material Desc."/>
 					<Text text="{ComponentDetailModel>/Maktx}"/>
 					<!--<Label text="Description"/>-->
 					<!--<Text text="{ComponentDetailModel>/Maktx}" />-->
 					<!--<Text text="{ComponentDetailModel>/Ltxa1}" />-->
-					<Label text="Item" wrapping="true"/>
+					<Label design="Bold" text="Item" wrapping="true"/>
 					<Text text="{ComponentDetailModel>/Posnr}"/>
-					<Label text="Operation" wrapping="true"/>
+					<Label design="Bold" text="Operation" wrapping="true"/>
 					<Text text="{ComponentDetailModel>/Rspos}"/>
-					<Label text="Stock Type" wrapping="true"/>
+					<Label design="Bold" text="Stock Type" wrapping="true"/>
 					<Text text="{ComponentDetailModel>/Postp}"/>
-					<Label text="Required Quantity" wrapping="true"/>
+					<Label design="Bold" text="Required Quantity" wrapping="true"/>
 					<Text text="{ComponentDetailModel>/Bdmng}"/>
-					<Label text="Plant" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Werks}"/>
-					<Label text="Location" wrapping="true"/>
-					<Text text="{ComponentDetailModel>/Lgort}"/>
+					<Label design="Bold" text="Plant" wrapping="true"/>
+					<Text text="{ComponentDetailModel>/Werks} - {ComponentDetailModel>/Name1}" />
+					<Label design="Bold" text="Location" wrapping="true"/>
+					<Text text="{ComponentDetailModel>/Lgort} - {ComponentDetailModel>/Lgobe}" />
 					<core:Title text=""/>
-					<Label text="Batch"/>
+					<Label design="Bold" text="Batch"/>
 					<Text text="{ComponentDetailModel>/Charg}"/>
-					<Label text="BinNum" wrapping="true"/>
+					<Label design="Bold" text="BinNum" wrapping="true"/>
 					<Text text="{ComponentDetailModel>/Lgpla}"/>
-					<Label text="Committed Quantity"/>
+					<Label design="Bold" text="Committed Quantity"/>
 					<Text text="{ComponentDetailModel>/Vmeng}"/>
-					<Label text="Withdraw Quantity" wrapping="true"/>
+					<Label design="Bold" text="Withdraw Quantity" wrapping="true"/>
 					<Text text="{ComponentDetailModel>/Enmng}"/>
-					<Label text="Reservation"/>
+					<Label design="Bold" text="Reservation"/>
 					<Text text="{ComponentDetailModel>/Rsnum}"/>
-					<Label text="Reservationv Item" wrapping="true"/>
+					<Label design="Bold" text="Reservationv Item" wrapping="true"/>
 					<Text text="{ComponentDetailModel>/Rspos}"/>
 				</f:content>
 			</f:SimpleForm>

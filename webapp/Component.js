@@ -24,15 +24,13 @@ sap.ui.define([
 				var jModel;
 				var that = this;
 				var odatamodel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/SAP/ZEAM_066_WM_FIORI_APP_SRV");
+				
 				odatamodel.read(
 					"/HeaderSet?$filter=Userid eq '11153519'&$expand=NVHEADERTOOPERATIONS,NVHEADERTOCOMPONENTS,NVHEADERTOWOMAP,NVHEADERTOOBJECTS,NVHEADERTOATTACHMENTS",
 					null, null, false,
 					function(responce) {
 						console.log(responce.results);
-						// foreach(var result in responce.results) {
-						// 	responce.result.documents = {};
-						// 	responce.result.documents.results = [];
-						// }
+						
 						for (var i = 0; i < responce.results.length; i++) {
 							responce.results[i].documents = {};
 							responce.results[i].documents.results = [];
@@ -48,10 +46,5 @@ sap.ui.define([
 					});
 				that.setModel(new JSONModel({}), "detailEditNoteModel");
 			}
-			//this.setModel(jModel); 
-
-		//var jModel1 = new JSONModel(data1); 
-		//this.setModel(jModel1);
-		//}
 	});
 });

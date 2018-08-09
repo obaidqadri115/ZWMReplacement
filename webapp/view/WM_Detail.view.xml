@@ -1,17 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	controllerName="ZWMReplacement.controller.WM_Detail" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page>
-		<!--<customHeader>
-			<Bar>
-				<contentLeft>
-					<Text text="Work Order : {WODetModel>/Aufnr} - Received "/>
-				</contentLeft>
-				<contentRight>
-					<Button icon="sap-icon://edit" press="onPressEdit" ariaLabelledBy="editButtonLabel"/>
-					<Button icon="sap-icon://action" press="onClick" ariaLabelledBy="actionButtonLabel"/>
-				</contentRight>
-			</Bar>
-		</customHeader>-->
 		<customHeader>
 			<Bar>
 				<contentMiddle>
@@ -41,20 +30,14 @@
 						<l:content>
 							<List id="operationsNotificationList" items="{WODetModel>/NVHEADERTOOPERATIONS/results}" itemPress="onListItemPressOperations">
 								<items>
-									<!--	<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>VWerksDesc}"
-										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
-										-->
 									<ObjectListItem title="{WODetModel>Ltxa1}" type="Active" number="{WODetModel>Vornr}" numberUnit="">
 										<firstStatus>
 											<ObjectStatus text="{WODetModel>Arbpl}" state="None"/>
 										</firstStatus>
-										<!--<ObjectStatus text="{path: 'RequestStatus',formatter: '.claimStatusText'}" state="{ path: 'RequestStatus',formatter: '.claimStatus'}"/>-->
 										<attributes>
-											<!--{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}-->
-											<!--class="fontForApprovedAmt" {=${RequestStatus} === 'A' ? true:false}  "{WODetModel>Fsavd} - {WODetModel>Fsavz}" -->
 											<ObjectAttribute title="Start" text="{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}"/>
-											<ObjectAttribute title="Finish" text="{parts:[{path:'WODetModel>Fsedd'},{path:'WODetModel>Fsedz'}],formatter : '.dateFormatter'}"/> 
-										</attributes> 
+											<ObjectAttribute title="Finish" text="{parts:[{path:'WODetModel>Fsedd'},{path:'WODetModel>Fsedz'}],formatter : '.dateFormatter'}"/>
+										</attributes>
 									</ObjectListItem>
 								</items>
 							</List>
@@ -66,28 +49,18 @@
 						<l:content>
 							<List id="componentsNotificationList" items="{WODetModel>/NVHEADERTOCOMPONENTS/results}" itemPress="onListItemPress">
 								<items>
-									<!--	<NotificationListItem title="{WODetModel>Ltxa1} " description="20" showCloseButton="false" authorName="{WODetModel>VWerksDesc}"
-										datetime="Withdrawn 0 EA" unread="true" priority="None" press="onListItemPressOperations"/>
-										-->
 									<ObjectListItem title="{WODetModel>Maktx}" type="Active" intro="{WODetModel>Ltxa1}" number="{WODetModel>Posnr}" numberUnit="">
-										<firstStatus>
-											<!--<ObjectStatus text="{WODetModel>Arbpl}" state="None"/>-->
-										</firstStatus>
-										<!--<ObjectStatus text="{path: 'RequestStatus',formatter: '.claimStatusText'}" state="{ path: 'RequestStatus',formatter: '.claimStatus'}"/>-->
+										<firstStatus></firstStatus>
 										<attributes>
-											<!--{parts:[{path:'WODetModel>Fsavd'},{path:'WODetModel>Fsavz'}],formatter : '.dateFormatter'}-->
-											<!--class="fontForApprovedAmt" {=${RequestStatus} === 'A' ? true:false}  "{WODetModel>Fsavd} - {WODetModel>Fsavz}" -->
-											<ObjectAttribute title="Requirement Quantity" text= "{WODetModel>Bdmng}"/>
-											<ObjectAttribute title="Withdrawal Quantity" text= "{WODetModel>Enmng}"/> 
-										</attributes> 
+											<ObjectAttribute title="Requirement Quantity" text="{WODetModel>Bdmng}"/>
+											<ObjectAttribute title="Withdrawal Quantity" text="{WODetModel>Enmng}"/>
+										</attributes>
 									</ObjectListItem>
 								</items>
 							</List>
-							
 						</l:content>
 					</l:VerticalLayout>
 				</IconTabFilter>
-				
 				<IconTabFilter text="Objects">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
@@ -96,63 +69,46 @@
 									<ObjectListItem title="Object {WODetModel>SermatGuid}" type="Active" number="" numberUnit="">
 										<firstStatus>
 											<ObjectStatus text="Desc {WODetModel>Equidescr}" state="None"/>
-											<ObjectStatus text="FLOC      {WODetModel>FunctLoc}" state="None"/>
+											<ObjectStatus text="FLOC {WODetModel>FunctLoc}" state="None"/>
 										</firstStatus>
 										<attributes>
 											<ObjectAttribute title="Equipment" text="{WODetModel>Equipment}"/>
-										</attributes> 
+										</attributes>
 									</ObjectListItem>
 								</items>
 							</List>
 						</l:content>
 					</l:VerticalLayout>
 				</IconTabFilter>
-				
-				<!--<IconTabFilter text="Attachments">-->
-				<!--	<l:VerticalLayout class="sapUiContentPadding" width="100%">-->
-				<!--		<l:content>-->
-				<!--			<List id="attachmentList" items="{WODetModel>/documents/results}"  mode="Delete" delete="deleteAttachment" itemPress="onListItemPressAttachment">-->
-				<!--				<items>-->
-				<!--					<ObjectListItem title="Name:{WODetModel>name}" type="Active" number="" numberUnit="">-->
-				<!--						<firstStatus>-->
-				<!--							<ObjectStatus text="Size:{WODetModel>size}" state="None"/>-->
-				<!--						</firstStatus>-->
-				<!--						<attributes>-->
-				<!--							<ObjectAttribute title="Type" text="{WODetModel>type}"/>-->
-				<!--						</attributes> -->
-				<!--					</ObjectListItem>-->
-				<!--				</items>-->
-				<!--			</List>-->
-				<!--		</l:content>-->
-				<!--	</l:VerticalLayout>-->
-				<!--</IconTabFilter>-->
-				
 				<IconTabFilter text="Attachments">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<l:content>
-							<List id="attachmentList" items="{WODetModel>/NVHEADERTOATTACHMENTS/results}"  mode="Delete" delete="deleteAttachment" itemPress="onListItemPressAttachment">
+							<List id="attachmentList" items="{WODetModel>/NVHEADERTOATTACHMENTS/results}" mode="Delete" delete="deleteAttachment"
+								itemPress="onListItemPressAttachment">
 								<items>
 									<ObjectListItem title="Name:{WODetModel>Name}" type="Active" number="" numberUnit="">
 										<firstStatus>
 											<ObjectStatus text="Description:{WODetModel>Description}" state="None"/>
 										</firstStatus>
 										<attributes>
-											<ObjectAttribute title="Type"  text="{WODetModel>Type}"/>
-										</attributes> 
+											<ObjectAttribute title="Type" text="{WODetModel>Type}"/>
+										</attributes>
 									</ObjectListItem>
 								</items>
 							</List>
 						</l:content>
 					</l:VerticalLayout>
 				</IconTabFilter>
-				
 				<IconTabFilter text="Maps">
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
-                		<l:content>
-                			 <html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geowm/index.html" target="_top" height="400px" width="800px"></html:iframe>
-                			 <!--<html:iframe id="map_iframe" src="http://10.35.20.185:8080/geoeam/index.html?id=000001005838&locale=en" target="_top" height="400px" width="800px"></html:iframe>-->
-                		</l:content>
-                  	</l:VerticalLayout>
+						<l:content>
+							<!--<html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geowm/index.html" target="_top" height="400px" width="800px"></html:iframe>-->
+							<html:iframe id="map_iframe" src="https://hved.utl.accenture.com/geoeam-au/index.html" target="_top" height="400px" width="800px"></html:iframe>
+							<!--<html:iframe id="map_iframe" src="http://10.35.20.185:8080/geoeam/index.html?id=1005836&locale=en" target="_top" height="400px" width="800px"></html:iframe>-->
+							<!--<html:iframe id="map_iframe" src=""></html:iframe>-->
+							<!--<html:iframe id="map_iframe" src="http://10.35.20.185:8080/geoeam/index.html?id=000001005838&locale=en" target="_top" height="400px" width="800px"></html:iframe>-->
+						</l:content>
+					</l:VerticalLayout>
 				</IconTabFilter>
 			</items>
 		</IconTabBar>
