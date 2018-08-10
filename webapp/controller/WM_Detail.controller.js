@@ -104,10 +104,10 @@ sap.ui.define([
 			var mapsArr = this.MasterRef.getView().getModel("workOrders").getData()[index].NVHEADERTOWOMAP;
 			var url = mapsArr.Url.replace("http", "https");*/
 
-			/*var url = this.getView().getModel("WODetModel").oData.NVHEADERTOWOMAP.Url;
-			url = url.replace("http", "https");*/
+			var url = this.getView().getModel("WODetModel").oData.NVHEADERTOWOMAP.Url;
+			// url = url.replace("http", "https");
 			
-			var url = "https://hved.utl.accenture.com/geoeam-au/index.html?id=1007193&locale=en";
+			// var url = "https://hved.utl.accenture.com/geoeam-au/index.html?id=1007193&locale=en";
 			var frame = "<iframe src=" + url + " width='100%' height='550px'></iframe>";
 			this.byId("mapsId").setContent(frame);
 

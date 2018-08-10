@@ -9,7 +9,7 @@
   "hcpdeploy": {
     "account": "p2000349780trial",
     "name": "zwmreplacement",
-    "lastVersionWeTriedToDeploy": "1.0.6"
+    "lastVersionWeTriedToDeploy": "1.0.7"
   },
   "mockpreview": {
     "mockUri": "/sap/opu/odata/sap/ZEAM_WM_FIORI_APP_SRV/",
